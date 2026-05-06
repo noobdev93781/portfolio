@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Khan — Content Marketing</title>
+    <meta name="description" content="Content Marketing Associate with 1.5+ years in B2B SaaS. Content strategy, SEO, and AI-powered marketing systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        img { -webkit-user-drag: none; user-drag: none; user-select: none; -webkit-user-select: none; pointer-events: none; }
+        /* Re-enable pointer events only for explicitly interactive images */
+        .cms-ol-thumb { pointer-events: auto; }
+
+        :root {
+            --bg: #ffffff;
+            --bg-2: #f8fafc;
+            --bg-3: #f1f5f9;
+            --border: #e2e8f0;
+            --text: #0f172a;
+            --text-2: #334155;
+            --text-3: #64748b;
+            --text-4: #94a3b8;
+            --accent: #4f46e5;
+            --accent-hover: #4338ca;
+            --accent-light: #eef2ff;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── NAV ─────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 200;
+            height: 60px;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-name {
+            font-size: 1.0625rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-name span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-3);
+            text-decoration: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.12s, color 0.12s;
+        }
+
+        .nav-links a:hover { background: var(--bg-2); color: var(--text); }
+
+        .nav-cta {
+            background: var(--accent) !important;
+            color: #fff !important;
+        }
+
+        .nav-cta:hover { background: var(--accent-hover) !important; }
+
+        .nav-contact {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .nav-contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-3);
+            text-decoration: none;
+            padding: 0.3rem 0.65rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: color 0.12s, border-color 0.12s, background 0.12s;
+            white-space: nowrap;
+        }
+
+        .nav-contact-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        @media (max-width: 900px) { .nav-contact { display: none; } }
+
+        /* ─── HERO ────────────────────────────────── */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 2rem 4rem;
+            background: #0f172a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 700px; height: 700px;
+            top: -200px; right: -200px;
+            background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px; height: 400px;
+            bottom: -100px; left: 10%;
+            background: radial-gradient(circle, rgba(79,70,229,0.1) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99,102,241,0.15);
+            border: 1px solid rgba(99,102,241,0.3);
+            color: #a5b4fc;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            padding: 0.35rem 0.875rem;
+            border-radius: 100px;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge-dot {
+            width: 6px; height: 6px;
+            background: #818cf8;
+            border-radius: 50%;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.25; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 3.75rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-underline {
+            width: min(100%, 560px);
+            height: 7px;
+            background: linear-gradient(90deg, #fde68a, #fbbf24);
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            opacity: 0.85;
+        }
+
+        .hero-role {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #818cf8;
+            margin-bottom: 1rem;
+        }
+
+        .hero-sub {
+            font-size: 1rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            max-width: 520px;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 0.875rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #4f46e5;
+            color: #fff;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: background 0.15s, transform 0.15s;
+        }
+
+        .btn-primary:hover { background: #4338ca; transform: translateY(-1px); }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.07);
+            color: #cbd5e1;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .btn-ghost:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            width: 100%;
+        }
+
+        .hero-stat-value {
+            font-size: 1.375rem;
+            font-weight: 800;
+            color: #f8fafc;
+            letter-spacing: -0.03em;
+            display: block;
+        }
+
+        .hero-stat-value em {
+            font-style: normal;
+            color: #818cf8;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8125rem;
+            color: #64748b;
+            display: block;
+            margin-top: 0.125rem;
+        }
+
+        /* ─── INTRO ───────────────────────────────── */
+        .intro-section {
+            padding: 3rem 2rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .intro-text {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--text-2);
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* ─── SECTION SHARED ──────────────────────── */
+        .section { padding: 5rem 2rem; }
+
+        .section-alt { background: var(--bg-2); }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        .section-head { margin-bottom: 2.5rem; text-align: center; }
+
+        .eyebrow {
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-h2 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-desc {
+            font-size: 0.9375rem;
+            color: var(--text-3);
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        /* ─── WRITING SECTION ─────────────────────── */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .blog-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            transform: translateY(-2px);
+            border-color: #c7d2fe;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 0.25rem 0.625rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+
+        .blog-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 0.625rem;
+            flex: 1;
+        }
+
+        .blog-card p {
+            font-size: 0.875rem;
+            color: var(--text-3);
+            line-height: 1.55;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-4);
+        }
+
+        .blog-meta-sep {
+            width: 3px; height: 3px;
+            background: var(--border);
+            border-radius: 50%;
+        }
+
+        .read-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.12s;
+        }
+
+        .blog-card:hover .read-btn { background: #e0e7ff; }
+
+        /* ─── PROJECTS SECTION ────────────────────── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .project-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            transform: translateY(-2px);
+        }
+
+        .project-icon {
+            width: 40px; height: 40px;
+            background: var(--accent-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .project-tag {
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-4);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-card h3 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            font-size: 0.8125rem;
+            color: var(--text-3);
+            line-height: 1.55;
+        }
+
+        .project-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.75rem;
+            color: var(--text-4);
+        }
+
+        .project-outcome {
+            font-size: 0.75rem;
+            color: var(--text-4);
+            line-height: 1.5;
+            margin-top: 0.625rem;
+            padding-top: 0.625rem;
+            border-top: 1px solid var(--border);
+        }
+
+
+        /* ─── EXPERIENCE SECTION ──────────────────── */
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px; top: 10px; bottom: 0;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .tl-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .tl-item:last-child { padding-bottom: 0; }
+
+        .tl-dot {
+            position: absolute;
+            left: -1.5rem;
+            top: 6px;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: var(--bg-2);
+            border: 2px solid var(--border);
+            z-index: 1;
+        }
+
+        .tl-item:first-child .tl-dot {
+            background: var(--accent-light);
+            border-color: var(--accent);
+        }
+
+        .tl-date {
+            font-size: 0.75rem;
+            color: var(--text-4);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .tl-role {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: var(--text);
+        }
+
+        .tl-company {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 0.875rem;
+            margin-top: 0.125rem;
+        }
+
+        .tl-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .tl-list li {
+            font-size: 0.875rem;
+            color: var(--text-2);
+            line-height: 1.55;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .tl-list li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--text-4);
+        }
+
+        /* ─── CONTACT SECTION ─────────────────────── */
+        .contact-wrap { max-width: 540px; margin: 0 auto; text-align: center; }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            padding: 1rem 1.25rem;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: border-color 0.15s, transform 0.15s;
+        }
+
+        .contact-item:hover { border-color: var(--accent); transform: translateX(4px); }
+
+        .contact-item-type {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: var(--text-4);
+            font-weight: 400;
+        }
+
+        /* ─── FOOTER ──────────────────────────────── */
+        footer {
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p { font-size: 0.8125rem; color: var(--text-4); }
+
+        /* ─── READER MODAL ────────────────────────── */
+        .reader-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 300;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s;
+        }
+
+        .reader-backdrop.open { opacity: 1; pointer-events: all; }
+
+        .reader-panel {
+            position: fixed;
+            top: 0; right: 0;
+            width: 90%;
+            max-width: 1100px;
+            height: 100%;
+            background: var(--bg);
+            z-index: 301;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+            box-shadow: -4px 0 40px rgba(0,0,0,0.12);
+        }
+
+        .reader-panel.open { transform: translateX(0); }
+
+        .reader-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.125rem 1.75rem;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .reader-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-4);
+        }
+
+        .reader-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .reader-ext-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .reader-ext-link:hover { text-decoration: underline; }
+
+        .reader-close {
+            width: 32px; height: 32px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-3);
+            font-size: 1.125rem;
+            line-height: 1;
+            transition: background 0.12s;
+        }
+
+        .reader-close:hover { background: var(--bg-2); }
+
+        .reader-body-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reader-loading {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.875rem;
+        }
+
+        .reader-loading p {
+            font-size: 0.875rem;
+            color: var(--text-3);
+        }
+
+        .reader-loading .reader-fallback-link {
+            font-size: 0.875rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .spinner {
+            width: 28px; height: 28px;
+            border: 2.5px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .reader-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2.5rem 3rem 4rem;
+            display: none;
+        }
+
+        /* Article typography */
+        .reader-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            display: block;
+        }
+
+        .reader-content h1 {
+            font-size: 1.625rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .reader-content h2 {
+            font-size: 1.1875rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: var(--text);
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .reader-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .reader-content p {
+            font-size: 0.9375rem;
+            color: var(--text-2);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .reader-content ul, .reader-content ol {
+            padding-left: 1.375rem;
+            margin-bottom: 1rem;
+        }
+
+        .reader-content li {
+            font-size: 0.9375rem;
+            color: var(--text-2);
+            line-height: 1.7;
+            margin-bottom: 0.375rem;
+        }
+
+        .reader-content strong { font-weight: 600; color: var(--text); }
+
+        .reader-content a { color: var(--accent); text-decoration: none; }
+        .reader-content a:hover { text-decoration: underline; }
+
+        .reader-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+            margin-bottom: 1.25rem;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .reader-content th {
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.8125rem;
+            color: var(--text-3);
+            padding: 0.625rem 0.75rem;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .reader-content td {
+            padding: 0.625rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-2);
+            vertical-align: top;
+        }
+
+        .reader-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1.25rem;
+            margin: 1.25rem 0;
+            background: var(--accent-light);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .reader-content blockquote p {
+            margin: 0;
+            font-style: italic;
+            color: var(--text-2);
+        }
+
+        @media (max-width: 720px) {
+            .reader-content { padding: 1.5rem 1.25rem 3rem; }
+        }
+
+        /* ─── CMS CARD ────────────────────────────── */
+        .cms-card {
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            background: #0f172a;
+            border-color: rgba(255,255,255,0.08);
+            cursor: pointer;
+        }
+
+        .cms-screenshots {
+            position: relative;
+            height: 155px;
+            overflow: hidden;
+        }
+
+        .cms-screenshots::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60%;
+            background: linear-gradient(to bottom, transparent 0%, #0f172a 100%);
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        .cms-ss {
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .cms-ss-1 { width: 80%; top: 8px; left: -2%; z-index: 1; }
+        .cms-ss-2 { width: 68%; top: 18px; right: -3%; z-index: 2; opacity: 0.75; }
+        .cms-ss-3 { width: 54%; top: 30px; left: 22%; z-index: 3; opacity: 0.55; }
+
+        .cms-view-hint {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(15,23,42,0.6);
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 10;
+            letter-spacing: 0.01em;
+        }
+
+        .cms-card:hover .cms-view-hint { opacity: 1; }
+
+        .cms-info {
+            padding: 1rem 1.5rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .cms-stats {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cms-stats span {
+            font-size: 0.725rem;
+            color: rgba(255,255,255,0.55);
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .cms-stats strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+
+        /* ─── CMS PROJECT OVERLAY ─────────────────── */
+        .cms-ol-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.72);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 400;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s;
+        }
+
+        .cms-ol-backdrop.open { opacity: 1; pointer-events: all; }
+
+        .cms-ol-panel {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.96);
+            width: min(92vw, 900px);
+            max-height: 90vh;
+            overflow-y: auto;
+            background: var(--bg);
+            border-radius: 16px;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+            z-index: 401;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s, transform 0.25s cubic-bezier(0.22,1,0.36,1);
+        }
+
+        .cms-ol-panel.open {
+            opacity: 1;
+            pointer-events: all;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .cms-ol-topbar {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1.25rem 1.5rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cms-ol-title {
+            font-size: 1.1875rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin-top: 0.375rem;
+            margin-bottom: 0;
+        }
+
+        .cms-ol-gallery { position: relative; background: #0f172a; }
+
+        .cms-ol-imgs {
+            position: relative;
+            height: clamp(170px, 33vw, 340px);
+            overflow: hidden;
+        }
+
+        .cms-ol-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top left;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cms-ol-img.active { opacity: 1; }
+
+        .cms-ol-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px; height: 38px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.15s;
+        }
+
+        .cms-ol-nav:hover { background: rgba(255,255,255,0.22); }
+        .cms-ol-prev { left: 0.875rem; }
+        .cms-ol-next { right: 0.875rem; }
+
+        .cms-ol-thumbs {
+            display: flex;
+            gap: 0.625rem;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-2);
+            overflow-x: auto;
+        }
+
+        .cms-ol-thumb {
+            width: 110px;
+            height: 58px;
+            object-fit: cover;
+            object-position: top left;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.15s, border-color 0.15s;
+            flex-shrink: 0;
+        }
+
+        .cms-ol-thumb:hover { opacity: 0.85; }
+        .cms-ol-thumb.active { opacity: 1; border-color: var(--accent); }
+
+        .cms-ol-body { padding: 1.25rem 1.5rem 1.75rem; }
+
+        .cms-ol-body p {
+            font-size: 0.9375rem;
+            color: var(--text-2);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .cms-ol-stats {
+            display: flex;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+
+        .cms-ol-stats span {
+            font-size: 0.8125rem;
+            color: var(--text-2);
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .cms-ol-stats strong { color: var(--text); font-weight: 600; }
+
+        /* ─── COLLATERAL CARD + OVERLAY ──────────── */
+        .collateral-card {
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            background: #0f172a;
+            border-color: rgba(255,255,255,0.08);
+            cursor: pointer;
+        }
+
+        .coll-card-shots {
+            position: relative;
+            height: 155px;
+            overflow: hidden;
+        }
+
+        .coll-card-shots::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60%;
+            background: linear-gradient(to bottom, transparent 0%, #0f172a 100%);
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        .coll-ss {
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.07);
+            pointer-events: none;
+        }
+
+        /* Sales deck (landscape) as main visual */
+        .coll-ss-1 { width: 80%; top: 8px; left: -2%; z-index: 1; }
+        /* Portrait brochures peek from right */
+        .coll-ss-2 { width: 37%; top: 6px; right: -1%; z-index: 2; opacity: 0.8; }
+        .coll-ss-3 { width: 29%; top: 12px; right: 12%; z-index: 3; opacity: 0.55; }
+
+        .collateral-card:hover .cms-view-hint { opacity: 1; }
+
+        .coll-card-info { padding: 1rem 1.5rem 1.25rem; }
+
+        /* Overlay */
+        .coll-ol-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.72);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 400;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s;
+        }
+
+        .coll-ol-backdrop.open { opacity: 1; pointer-events: all; }
+
+        .coll-ol-panel {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.96);
+            width: min(92vw, 900px);
+            max-height: 90vh;
+            overflow-y: auto;
+            background: var(--bg);
+            border-radius: 16px;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+            z-index: 401;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s, transform 0.25s cubic-bezier(0.22,1,0.36,1);
+        }
+
+        .coll-ol-panel.open {
+            opacity: 1;
+            pointer-events: all;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .coll-ol-topbar {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1.25rem 1.5rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .coll-ol-gallery { position: relative; background: #0f172a; }
+
+
+        .coll-ol-imgs {
+            position: relative;
+            height: clamp(180px, 34vw, 360px);
+            overflow: hidden;
+        }
+
+        .coll-ol-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .coll-ol-img.active { opacity: 1; }
+
+        .coll-ol-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px; height: 38px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.15s;
+        }
+
+        .coll-ol-nav:hover { background: rgba(255,255,255,0.22); }
+        .coll-ol-prev { left: 0.875rem; }
+        .coll-ol-next { right: 0.875rem; }
+
+        .coll-ol-thumbs {
+            display: flex;
+            gap: 0.625rem;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-2);
+            overflow-x: auto;
+        }
+
+        .coll-ol-thumb {
+            height: 58px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.15s, border-color 0.15s;
+            flex-shrink: 0;
+            pointer-events: auto;
+            background: #0f172a;
+        }
+
+        .coll-ol-thumb:hover { opacity: 0.85; }
+        .coll-ol-thumb.active { opacity: 1; border-color: var(--accent); }
+
+        .coll-ol-slides { padding: 1.25rem 1.5rem 1.75rem; }
+
+        .coll-ol-slide { display: none; }
+        .coll-ol-slide.active { display: block; }
+
+        .coll-doc-type-badge {
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.625rem;
+        }
+
+        .coll-ol-slide h3 {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.015em;
+            margin-bottom: 0.5rem;
+        }
+
+        .coll-ol-slide p {
+            font-size: 0.9375rem;
+            color: var(--text-2);
+            line-height: 1.7;
+            margin-bottom: 0.875rem;
+        }
+
+        .coll-doc-redacted {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-4);
+        }
+
+        /* Picker */
+        .coll-picker { padding: 1.5rem; }
+
+        .coll-picker-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .coll-picker-grid { grid-template-columns: 1fr; }
+        }
+
+        .coll-picker-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+            background: var(--bg-2);
+        }
+
+        .coll-picker-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+        }
+
+        .coll-picker-thumb {
+            height: 120px;
+            overflow: hidden;
+            background: #0f172a;
+        }
+
+        .coll-picker-thumb--portrait { height: 160px; }
+
+        .coll-picker-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            pointer-events: none;
+            display: block;
+        }
+
+        .coll-picker-info { padding: 0.875rem 1rem; }
+
+        .coll-picker-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 0.375rem 0 0.25rem;
+            line-height: 1.4;
+        }
+
+        .coll-picker-meta {
+            font-size: 0.72rem;
+            color: var(--text-4);
+            margin: 0;
+        }
+
+        /* Viewer */
+        .coll-viewer { display: none; }
+
+        .coll-viewer-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.625rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .coll-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-2);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            transition: color 0.15s, background 0.15s;
+        }
+
+        .coll-back-btn:hover { color: var(--text); background: var(--bg-2); }
+
+        .coll-ol-counter {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--text-4);
+        }
+
+        /* ─── RESPONSIVE ──────────────────────────── */
+        @media (max-width: 900px) {
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 720px) {
+            .nav-links { display: none; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .hero-stats { gap: 1.5rem; }
+            .reader-panel { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────── -->
+<nav>
+    <a href="#" class="nav-name">Sahil <span>Khan</span></a>
+    <ul class="nav-links">
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-contact">
+        <a href="https://linkedin.com/in/sahil-khan-698705251" target="_blank" rel="noopener" class="nav-contact-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+        </a>
+        <a href="tel:+919378184948" class="nav-contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.42v-.5z"/></svg>
+            +91-93781-84948
+        </a>
+    </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open to new roles
+        </div>
+        <h1>Hey, I'm Sahil Khan 👋</h1>
+        <div class="hero-underline"></div>
+        <p class="hero-role">B2B SaaS Content &amp; GTM Foundations.</p>
+        <p class="hero-sub">I build marketing from scratch: brand voice, SEO content, GTM strategy, and AI-powered workflows. Currently building the marketing foundation for Vantage Pulse at Vantage Circle.</p>
+        <div class="hero-actions">
+            <a href="#writing" class="btn-primary">
+                View Writing
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="mailto:sahilkhan93781@gmail.com" class="btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+            <div>
+                <span class="hero-stat-value"><em>4</em> formats</span>
+                <span class="hero-stat-label">Blogs · Docs · UX · Collaterals</span>
+            </div>
+            <div>
+                <span class="hero-stat-value"><em>30+</em></span>
+                <span class="hero-stat-label">Organic leads driven</span>
+            </div>
+            <div>
+                <span class="hero-stat-value"><em>1.5+</em> yrs</span>
+                <span class="hero-stat-label">B2B SaaS experience</span>
+            </div>
+            <div>
+                <span class="hero-stat-value"><em>2</em> live</span>
+                <span class="hero-stat-label">AI systems deployed</span>
+            </div>
+            <div>
+                <span class="hero-stat-value"><em>0 → 500+</em></span>
+                <span class="hero-stat-label">Built &amp; grew Vantage Pulse's LinkedIn</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── WRITING ───────────────────────────────────── -->
+<section class="section" id="writing">
+    <div class="container">
+        <div class="section-head" style="display:flex; flex-direction:column; align-items:center; text-align:center; flex-wrap:wrap; gap:1.5rem;">
+            <div>
+                <p class="eyebrow">Writing</p>
+                <h2 class="section-h2">Published Articles</h2>
+                <p class="section-desc">I manage a library of <strong>40+ published articles</strong> on employee engagement, HR strategy, and the future of work. Four samples below. Click any card to read it here.</p>
+            </div>
+        </div>
+        <div class="blog-grid">
+
+            <div class="blog-card" onclick="openReader('sentiment')">
+                <span class="blog-tag">Employee Experience</span>
+                <h3>Why You Need to Measure Employee Sentiment for a Thriving Workplace</h3>
+                <p>Why employees are the emotional pulse of an organization, and how measuring sentiment turns invisible morale shifts into decisions before it's too late.</p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span>13 min read</span>
+                        <span class="blog-meta-sep"></span>
+                        <span>Mar 2026</span>
+                    </div>
+                    <span class="read-btn">
+                        Read
+                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="blog-card" onclick="openReader('fail')">
+                <span class="blog-tag">HR Strategy</span>
+                <h3>Why Employee Surveys Fail and How to Fix It</h3>
+                <p>Every year HR runs surveys hoping to surface honest feedback. The results end up in a deck and quietly disappear. A deep-dive into why it happens, with a 3-layer framework to fix it.</p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span>12 min read</span>
+                        <span class="blog-meta-sep"></span>
+                        <span>Mar 2026</span>
+                    </div>
+                    <span class="read-btn">
+                        Read
+                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="blog-card" onclick="openReader('tools')">
+                <span class="blog-tag">Buyer's Guide</span>
+                <h3>15 Best Employee Pulse Survey Platforms for HR Teams</h3>
+                <p>A comprehensive comparison of 15 pulse survey tools, with 7 highlighted picks rated on features, usability, and the ability to drive meaningful, actionable feedback.</p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span>26 min read</span>
+                        <span class="blog-meta-sep"></span>
+                        <span>Feb 2026</span>
+                    </div>
+                    <span class="read-btn">
+                        Read
+                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="blog-card" onclick="openReader('dashboard')">
+                <span class="blog-tag">Product Deep-Dive</span>
+                <h3>Employee Survey Dashboards Explained: Your Complete Guide to Smarter Feedback Insights</h3>
+                <p>What every HR leader needs to know about turning a flood of survey responses into clear, visual insights that actually drive decisions, and what most tools miss.</p>
+                <div class="blog-card-footer">
+                    <div class="blog-meta">
+                        <span>16 min read</span>
+                        <span class="blog-meta-sep"></span>
+                        <span>2026</span>
+                    </div>
+                    <span class="read-btn">
+                        Read
+                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────── -->
+<section class="section section-alt" id="projects">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">Projects</p>
+            <h2 class="section-h2">What I've Built</h2>
+            <p class="section-desc">Beyond writing: marketing systems, tools, and growth projects.</p>
+        </div>
+        <div class="projects-grid">
+
+<div class="project-card" onclick="openCmsOverlay()" role="button" tabindex="0" aria-label="View SEO Content CMS project" style="cursor:pointer;">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <span class="project-tag">Tools · AI</span>
+                <h3>SEO Content CMS</h3>
+                <p>Built a Next.js + Decap CMS to manage 43 blogs — with automated SEO metadata, schema markup, link health tracking, and a real-time analytics dashboard.</p>
+                <p class="project-outcome">Replaced a manual audit process across 44 live articles; reduced SEO review time from hours to minutes.</p>
+                <div class="project-placeholder">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    View Project
+                </div>
+            </div>
+
+<div class="project-card" onclick="openCollateralOverlay()" role="button" tabindex="0" aria-label="View Sales Collateral Suite" style="cursor:pointer;">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <span class="project-tag">Collateral</span>
+                <h3>Sales Collateral Suite</h3>
+                <p>Built the full collateral library for Vantage Pulse from scratch — sales deck, product brochures, and one-pagers covering the complete buyer journey from awareness to close.</p>
+                <p class="project-outcome">Used across the full sales cycle by Sales and CX teams; contributed to 30+ organic leads in the pipeline.</p>
+                <div class="project-placeholder">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    View Samples
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 0v6l3 3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span class="project-tag">Content Strategy</span>
+                <h3>Brand Voice & GTM Content Foundation</h3>
+                <p>Developed brand voice guidelines, messaging framework, and the full content strategy for Vantage Pulse's go-to-market motion, from scratch to launch.</p>
+                <p class="project-outcome">Adopted across 40+ articles and 3 collateral formats; now the single reference for all Vantage Pulse messaging.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── EXPERIENCE ────────────────────────────────── -->
+<section class="section" id="experience">
+    <div class="container" style="max-width: 720px;">
+        <div class="section-head">
+            <p class="eyebrow">Career</p>
+            <h2 class="section-h2">Experience</h2>
+        </div>
+        <div class="timeline">
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <p class="tl-date">Dec 2024 – Present</p>
+                <p class="tl-role">Content Marketing Associate</p>
+                <p class="tl-company">Vantage Circle · Guwahati, India</p>
+                <ul class="tl-list">
+                    <li>Built the end-to-end marketing foundation for Vantage Pulse: brand voice, content strategy, and GTM collaterals.</li>
+                    <li>Managed a 40+ blog content library from research and writing to SEO updates, driving consistent search ranking growth.</li>
+<li>Built a CMS in Claude Code to automate SEO metadata, schema markup, and link health tracking across 40+ blogs.</li>
+                    <li>Wrote UX copy and product documentation for Vantage Pulse, covering onboarding flows, in-app tooltips, and feature guides for end users and HR admins.</li>
+                    <li>Built a centralized collateral repository for Sales and CX teams, consolidating pitch decks, one-pagers, and product docs into a single reference hub.</li>
+                    <li>Built Vantage Pulse's LinkedIn presence from scratch, handling everything from page setup and brand voice to content ideation and publishing, growing it to 500+ followers with no paid promotion.</li>
+                </ul>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <p class="tl-date">May 2024 – Dec 2024</p>
+                <p class="tl-role">SEO Intern</p>
+                <p class="tl-company">Vantage Circle · Guwahati, India</p>
+                <ul class="tl-list">
+                    <li>Drove organic traffic growth through data-driven SEO strategies and technical website optimizations.</li>
+                    <li>Used GA4, SEMrush, and Ahrefs for keyword research, competitor analysis, and backlink audits.</li>
+                </ul>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <p class="tl-date">Nov 2023 – Dec 2023</p>
+                <p class="tl-role">Publishing Consultant</p>
+                <p class="tl-company">Notion Press · Chennai, India</p>
+                <ul class="tl-list">
+                    <li>Developed foundational skills in publishing workflows and client-facing communication.</li>
+                    <li>Drafted sales pitches, emails, and business documents.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ── CONTACT ────────────────────────────────────── -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="contact-wrap">
+            <p class="eyebrow">Contact</p>
+            <h2 class="section-h2">Let's Talk</h2>
+            <p class="section-desc">Open to full-time roles in content marketing, SEO, and B2B SaaS marketing. Based in India, open to remote.</p>
+            <div class="contact-list">
+                <a href="mailto:sahilkhan93781@gmail.com" class="contact-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.25"/><path d="M2 5l6 5 6-5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg>
+                    sahilkhan93781@gmail.com
+                    <span class="contact-item-type">Email</span>
+                </a>
+                <a href="https://linkedin.com/in/sahil-khan-698705251" target="_blank" rel="noopener" class="contact-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                    linkedin.com/in/sahil-khan-698705251
+                    <span class="contact-item-type">LinkedIn</span>
+                </a>
+                <a href="tel:+919378184948" class="contact-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 9.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" stroke="currentColor" stroke-width="1.25"/></svg>
+                    +91-93781-84948
+                    <span class="contact-item-type">Phone</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sahil Khan · Content Marketing Associate</p>
+</footer>
+
+<!-- ── READER MODAL ────────────────────────────────── -->
+<div class="reader-backdrop" id="readerBackdrop" onclick="closeReader()"></div>
+<div class="reader-panel" id="readerPanel">
+    <div class="reader-topbar">
+        <span class="reader-label">Reading</span>
+        <div class="reader-actions">
+            <a href="#" id="readerExtLink" class="reader-ext-link" target="_blank" rel="noopener">
+                Open in new tab
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <button class="reader-close" onclick="closeReader()">×</button>
+        </div>
+    </div>
+    <div class="reader-body-wrap">
+        <div class="reader-loading" id="readerLoading">
+            <div class="spinner"></div>
+            <p>Loading article...</p>
+        </div>
+        <div id="readerContent" class="reader-content"></div>
+    </div>
+</div>
+
+<!-- ── COLLATERAL OVERLAY ────────────────────── -->
+<div class="coll-ol-backdrop" id="collOlBackdrop" onclick="closeCollateralOverlay()"></div>
+<div class="coll-ol-panel" id="collOlPanel">
+    <div class="coll-ol-topbar">
+        <div>
+            <span class="project-tag" style="background:var(--accent-light);color:var(--accent);">Collateral</span>
+            <p class="cms-ol-title">Sales Collateral Suite</p>
+        </div>
+        <button class="reader-close" onclick="closeCollateralOverlay()">×</button>
+    </div>
+    <!-- Document picker -->
+    <div class="coll-picker" id="collPicker">
+        <div class="coll-picker-grid">
+            <div class="coll-picker-card" onclick="collOpenDoc('sales-deck')">
+                <div class="coll-picker-thumb">
+                    <img src="collaterals/previews/sales-deck-p01.jpg" draggable="false" />
+                </div>
+                <div class="coll-picker-info">
+                    <span class="coll-doc-type-badge">Sales Deck</span>
+                    <p class="coll-picker-title">Vantage Pulse Sales Presentation</p>
+                    <p class="coll-picker-meta">14 slides</p>
+                </div>
+            </div>
+            <div class="coll-picker-card" onclick="collOpenDoc('brochure-2pager')">
+                <div class="coll-picker-thumb coll-picker-thumb--portrait">
+                    <img src="collaterals/previews/brochure-2pager-p01.jpg" draggable="false" />
+                </div>
+                <div class="coll-picker-info">
+                    <span class="coll-doc-type-badge">2-Page Brochure</span>
+                    <p class="coll-picker-title">Product Overview: Get Real Feedback. Make Real Change.</p>
+                    <p class="coll-picker-meta">2 pages</p>
+                </div>
+            </div>
+            <div class="coll-picker-card" onclick="collOpenDoc('brochure-1pager')">
+                <div class="coll-picker-thumb coll-picker-thumb--portrait">
+                    <img src="collaterals/previews/brochure-1pager-p01.jpg" draggable="false" />
+                </div>
+                <div class="coll-picker-info">
+                    <span class="coll-doc-type-badge">1-Page Brief</span>
+                    <p class="coll-picker-title">Unlock the Full Power of Recognition with Vantage Pulse</p>
+                    <p class="coll-picker-meta">1 page</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Per-document viewer -->
+    <div class="coll-viewer" id="collViewer">
+        <div class="coll-viewer-bar">
+            <button class="coll-back-btn" onclick="collBackToPicker()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                All documents
+            </button>
+            <span class="coll-ol-counter" id="collCounter"></span>
+        </div>
+        <div class="coll-ol-gallery">
+            <div class="coll-ol-imgs" id="collOlImgs"></div>
+            <button class="cms-ol-nav cms-ol-prev" onclick="collNav(-1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="cms-ol-nav cms-ol-next" onclick="collNav(1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="coll-ol-thumbs" id="collOlThumbs"></div>
+        </div>
+        <div class="coll-ol-slides" id="collOlSlide"></div>
+    </div>
+</div>
+
+<!-- ── CMS PROJECT OVERLAY ───────────────────── -->
+<div class="cms-ol-backdrop" id="cmsOlBackdrop" onclick="closeCmsOverlay()"></div>
+<div class="cms-ol-panel" id="cmsOlPanel">
+    <div class="cms-ol-topbar">
+        <div>
+            <span class="project-tag" style="background:var(--accent-light);color:var(--accent);">Tools · AI</span>
+            <p class="cms-ol-title">SEO Content CMS</p>
+        </div>
+        <button class="reader-close" onclick="closeCmsOverlay()">×</button>
+    </div>
+    <div class="cms-ol-gallery">
+        <div class="cms-ol-imgs" id="cmsOlImgs">
+            <img src="cms-screenshots/cms-dashboard.png" alt="Dashboard" class="cms-ol-img active" />
+            <img src="cms-screenshots/cms-analytics.png" alt="Analytics" class="cms-ol-img" />
+            <img src="cms-screenshots/cms-blog-detail.png" alt="Blog Detail" class="cms-ol-img" />
+        </div>
+        <button class="cms-ol-nav cms-ol-prev" onclick="cmsNav(-1)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="cms-ol-nav cms-ol-next" onclick="cmsNav(1)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+    </div>
+    <div class="cms-ol-thumbs">
+        <img src="cms-screenshots/cms-dashboard.png" alt="Dashboard" class="cms-ol-thumb active" onclick="cmsGoTo(0)" />
+        <img src="cms-screenshots/cms-analytics.png" alt="Analytics" class="cms-ol-thumb" onclick="cmsGoTo(1)" />
+        <img src="cms-screenshots/cms-blog-detail.png" alt="Blog Detail" class="cms-ol-thumb" onclick="cmsGoTo(2)" />
+    </div>
+    <div class="cms-ol-body">
+        <p>Vantage Pulse had 44 published articles spread across 7 categories, and keeping tabs on their SEO health meant switching between three or four tools every single time. I got tired of it. So I built something better.</p>
+        <p>I built a custom CMS in Claude Code, entirely on my own, that pulls everything into one dashboard. SEO scores, link health, metadata gaps, priority fixes — all visible at a glance, all in one place. No more context switching, no more spreadsheets, no more guessing which article needs attention.</p>
+        <p>The real win was time. What used to eat up hours of manual cross-referencing now takes a few minutes. And because everything lives in one place, I can actually focus on fixing problems instead of finding them.</p>
+    </div>
+</div>
+
+<script>
+
+const articles = {
+  sentiment: {
+    url: 'https://www.vantagecircle.com/en/blog/employee-sentiment/',
+    html: () => `
+<h1>Why you need to Measure Employee Sentiment for a Thriving Workplace</h1>
+
+<h2>What is Employee Sentiment?</h2>
+<p>We all have different moods throughout our workday. Employee sentiment works the same way, but on a bigger scale. It is the collective emotional output employees have towards their work, their colleagues and their organization. Are they excited? Indifferent or totally frustrated? It's not just about whether someone's having a good or bad day, it's about the underlying feelings that stick around.</p>
+<p>To put this into perspective, Gallup's 2024 State of the Global Workplace report found that "only 23% of employees worldwide feel engaged at work," highlighting the importance of understanding workplace emotions.</p>
+<p>Employee sentiment isn't static. It's constantly shifting throughout what we call the employee experience lifecycle — the journey employees take from their first day to their last. This sentiment intertwines deeply with employee voice, encompassing how freely employees can express their thoughts and contribute to organizational dialogue.</p>
+
+<h2>Types of Employee Sentiment</h2>
+<h3>1. Positive Sentiment</h3>
+<p>People exhibiting positive sentiment typically see room for growth, trust their managers, and feel recognized for their efforts. It's not just "I like my job"; it's more like "I believe in what we're doing."</p>
+<h3>2. Neutral Sentiment</h3>
+<p>Neutral sentiment reflects an attitude of "it's just a job." These employees complete their tasks but lack enthusiasm. However, neutral sentiment can quickly shift negative if these employees don't see a future or feel invisible. Conversely, encouragement or new challenges can reverse this trend.</p>
+<h3>3. Negative Sentiment</h3>
+<p>This is where warning signs emerge. You might notice increased sick days, social media complaints, or resignation waves. According to a Goodhire survey, around "82% of American Workers consider quitting their job just to escape a bad manager." Negative sentiment often springs from feeling micromanaged, unappreciated, or unfairly compensated, and its negativity can spread quickly through teams.</p>
+
+<h2>Why Analyzing Employee Sentiment Matters</h2>
+<h3>1. Retention</h3>
+<p>A primary reason companies conduct sentiment analysis is preventing talented employees from departing. Real-time sentiment monitoring catches subtle warning signs and enables proactive intervention. Research from Gallup shows that "highly engaged workplaces experience a 43% reduction in turnover." Small adjustments like clarifying roles or offering new challenges significantly impact retention.</p>
+<h3>2. Productivity</h3>
+<p>People actually work harder and smarter when they believe their opinions matter. A Salesforce study found that "employees are 4.6 times more likely to perform at their highest potential if they feel genuinely heard." Sentiment analysis identifies brewing negativity, allowing quick corrective action through team discussions or process clarifications.</p>
+<h3>3. Bridging Generational and Cultural Gaps</h3>
+<p>Modern workplaces include Baby Boomers, Gen X, Millennials, and Gen Z, each with distinct communication preferences. Sentiment analysis reveals what resonates with different workforce segments. McKinsey noted that "companies strong in diversity, equity, and inclusion are 36% more likely to outperform financially."</p>
+<h3>4. Innovation</h3>
+<p>Innovation thrives when teams feel motivated about initiatives. Sentiment analysis reveals which projects spark excitement and which ones receive lukewarm receptions, helping leadership decide when to pivot, invest further, or abandon ideas.</p>
+<h3>5. Measuring Psychological Safety</h3>
+<p>Psychological safety — the confidence employees have in raising concerns without penalty — is crucial for high performance. Sentiment analysis with natural language processing detects subtle anxiety cues. Google's Project Aristotle research found that "psychological safety is the top factor for high-performing teams."</p>
+<h3>6. Tackling Burnout</h3>
+<p>Burnout arrives gradually rather than suddenly. Sentiment analysis detects creeping stress or frustration in specific teams or roles before employees leave. The American Institute of Stress estimates that "job-related stress costs U.S. businesses up to $300 billion a year" through absenteeism and turnover. Early detection enables proactive interventions.</p>
+
+<h2>How to Measure Employee Sentiment</h2>
+<p>Organizations typically employ two main approaches: quantitative and qualitative methods. Combined, they provide comprehensive workplace emotional landscape understanding.</p>
+<h3>Quantitative Methods</h3>
+<ul>
+  <li><strong>Annual Surveys:</strong> Longer, traditional surveys conducted yearly, offering in-depth analysis of holistic employee sentiment.</li>
+  <li><strong>Pulse Surveys:</strong> Shorter, frequent surveys tracking sentiment changes over time, providing weekly or daily morale snapshots.</li>
+  <li><strong>eNPS:</strong> A quick measure of employee likelihood to recommend the company as an excellent workplace.</li>
+  <li><strong>Engagement Metrics:</strong> Turnover, absenteeism, and productivity provide numeric indicators of sentiment trends.</li>
+</ul>
+<h3>Qualitative Methods</h3>
+<ul>
+  <li><strong>Interviews &amp; Focus Groups:</strong> Enable free-form discussion about experiences and concerns, often uncovering issues hidden in multiple-choice surveys.</li>
+  <li><strong>Open-Ended Questions:</strong> Text boxes asking questions like "How do you feel about your workload?" reveal rich insights.</li>
+  <li><strong>Social Listening:</strong> Monitoring internal channels like Slack or Microsoft Teams provides real-time, candid sentiment data.</li>
+</ul>
+<h3>Leveraging AI and Sentiment Analysis</h3>
+<p>Modern AI-powered tools using Natural Language Processing (NLP) analyze large amounts of open-ended feedback in seconds, automatically gauging whether comments lean positive, negative, or neutral. This approach identifies recurring themes before they spiral. Solutions like Vantage Pulse integrate these features, providing real-time dashboards that flag potential problems for rapid response.</p>
+
+<h2>Steps to Conduct Employee Sentiment Analysis</h2>
+<h3>1. Collect the Data</h3>
+<p>Go beyond basic surveys. Mix pulse surveys into your data collection strategy, scheduling recurring surveys daily, weekly, or monthly. Don't overlook everyday communication channels like Slack or project management platforms, where you'll catch candid feedback not appearing in formal surveys.</p>
+<h3>2. Process the Data</h3>
+<p>Ensure data accuracy and consistent formatting, removing typos, duplicates, and stray text. Leverage AI-driven tools to automatically interpret open-ended responses, identifying positive, negative, or neutral trends and handling sarcasm or complex language.</p>
+<h3>3. Analyze Trends</h3>
+<p>Connect sentiment scores to traditional metrics like turnover, absenteeism, or eNPS. Notice whether terms like "stress," "burnout," or "team support" repeatedly appear, enabling targeted problem-solving or celebration of strengths.</p>
+<h3>4. Visualize the Results</h3>
+<p>Numbers on spreadsheets rarely inspire action. Heatmaps and interactive dashboards provide at-a-glance views of engagement highs and lows. Demographic filters let you examine data by department, location, and gender, identifying specific areas needing attention.</p>
+<h3>5. Act on Insights</h3>
+<p>Share key findings in town halls or meetings, demonstrating that feedback matters. Anonymous follow-up conversations clarify concerns privately. Continue with recurring pulse surveys to assess whether new initiatives improve sentiment.</p>
+
+<h2>Turning Employee Sentiment into Change</h2>
+<h3>1. Enhance Communication</h3>
+<p>Use sentiment data to identify specific communication improvement areas. If employees feel uninformed about company changes, implement regular updates through newsletters or town hall meetings.</p>
+<h3>2. Strengthen Company Culture</h3>
+<p>Use sentiment insights to assess how well your culture supports Diversity, Equity, Inclusion, and Belonging (DEIB). If feedback indicates gaps, revise hiring practices or establish employee resource groups. Creating community and purpose makes employees feel more connected.</p>
+<h3>3. Invest in Career Development</h3>
+<p>Analyze sentiment data for career advancement needs. LinkedIn found that "94% of employees would stay at a company longer if it invested in their career development," highlighting continuous learning importance.</p>
+<h3>4. Promote Work-Life Balance</h3>
+<p>When sentiment analysis shows employees feeling stretched thin, prioritize work-life balance. Atlassian's Team Anywhere initiative allows employees to choose work locations, leading to "91% of employees citing the policy as a reason for staying with Atlassian."</p>
+<h3>5. Recognize and Reward Employees</h3>
+<p>Use sentiment data to determine what recognition types resonate most — formal awards, performance bonuses, or informal acknowledgments like meeting shout-outs.</p>
+
+<h2>Wrapping It Up</h2>
+<p>Understanding your employees' true feelings is a game-changer in today's workplace. It's not just gathering data; it's cultivating spaces where people feel genuinely heard. When you transform raw feedback into meaningful change — improving processes, reinforcing culture, boosting morale — everyone wins.</p>
+<p>Start small with targeted surveys and grow from there. The real power lies in acting on what you learn. In a world where talent is everything, truly listening to and acting on employee feedback isn't optional — it's essential.</p>
+`
+  },
+
+  fail: {
+    url: 'https://www.vantagecircle.com/en/blog/why-employee-surveys-fail/',
+    html: () => `
+<h1>Why Employee Surveys Fail and How to Fix It</h1>
+<blockquote>Employee surveys fail because organisations collect feedback but have no system to convert it into decisions, owners, and visible action. The fix isn't a better survey tool. It's an operating rhythm that makes follow-through easier than avoidance.</blockquote>
+<p>Every year, HR runs an employee survey hoping to surface honest feedback and uncover what's really going on inside the organization, yet more often than not, those efforts amount to nothing. The results get packaged into a deck, leaders sit through a meeting, and then the findings quietly disappear.</p>
+<p>After a cycle or two of this, employees stop bothering to participate — not because they're disengaged, but because they've learned the hard way that nothing will change. The usual suspects get blamed: survey fatigue, bad tools, a distracted workforce. But the survey worked fine. The organization just has no idea how to act on what it learned.</p>
+
+<h2>The Real Reason Employee Surveys Fail: No System for Follow-Through</h2>
+<p>Implementation amnesia is what happens when a survey creates insight, but the organization has no reliable way to convert that insight into decisions, actions, and visible progress updates. In practice, it becomes a trust problem. Employees participate once, then watch priorities shift and the work stall.</p>
+<p>Gallup's data reflects how common this is. Only <strong>8%</strong> of employees strongly agree that their organization takes action on survey results. That number matters because it describes the default employee expectation going into the second cycle.</p>
+<p>The stakes go beyond employee sentiment. A large meta-analysis study found meaningful relationships between unit-level satisfaction and engagement and outcomes such as productivity, profit, turnover, and safety incidents. When follow-through breaks, the risk shows up in business outcomes, not only in survey participation.</p>
+
+<h2>Three Things That Need to Exist Before Any Survey Tool Will Work</h2>
+<h3>1. You need an executive who can actually approve spending</h3>
+<p>If your survey "sponsor" can't shift budget or change priorities, you have a problem. Feedback without funding is just venting with extra steps.</p>
+<h3>2. Your culture has to be able to handle bad news</h3>
+<p>If every critical result gets explained away with "well, people don't understand the context," just stop surveying. You're not ready. Some organizations would rather preserve comfort than face reality, and no amount of data will change that.</p>
+<h3>3. You have to be willing to fix less stuff</h3>
+<p>You cannot simultaneously address compensation, career development, work-life balance, manager quality, and tooling gaps. Pick two things. Actually fix them. That beats a 12-point action plan that goes nowhere.</p>
+<p>If these conditions don't exist in your organization, pause your survey program and solve those first. Otherwise, you're just manufacturing evidence of dysfunction.</p>
+
+<h2>Where Survey Programs Actually Die</h2>
+<h3>Death by meeting</h3>
+<p>The meeting happens, results get shared, and the discussion is genuinely good. Then it ends, and nobody has written down who is doing what by when. Two weeks later, the work that was discussed has quietly been absorbed by other priorities, and the moment is gone as if the meeting never happened.</p>
+<h3>Death by unfunded plans</h3>
+<p>Someone in the room says "great idea, someone should really work on that," and the room nods along. But the follow-up questions never get asked: with what time, what budget, and whose existing priorities get bumped to make room? Without answers to those questions, the plan exists only as a good intention.</p>
+<h3>Death by unrealistic expectations</h3>
+<p>The problem here is a mismatch between the actual issue and the suggested fix. When a company realizes pay is too low but tells managers to simply "talk more about careers," they are trying to solve a money problem with a conversation. This is unfair to local managers. They don't control the company budget, yet they are the ones who have to explain the lack of raises to their teams.</p>
+<h3>Death by silence</h3>
+<p>Most organisations share the results, promise a plan, and then disappear for six months. Employees do not need a follow-up survey to figure out what happened, because silence is its own answer.</p>
+<p>The damage extends beyond one bad cycle. Silence does not just disappoint people; it teaches them that the survey is theatre, that the results went into a deck and died there, that participating was a waste of time they will not get back. By the third cycle, you are no longer fighting low engagement but earned cynicism, which is a much harder thing to reverse.</p>
+<p>The organisations that sustain high participation over time do not necessarily have better surveys. They have better communication habits. They tell people what they heard, what they decided, and what they chose not to fix and why. That last part matters more than most HR teams realise, because employees can accept "we cannot address this right now" far better than they can accept being ignored.</p>
+
+<h2>A Framework for Making Employee Surveys Work</h2>
+<p>Stop making this a special HR project. Build it into how the business already runs. There are three layers:</p>
+<ol>
+  <li><strong>Executive Layer (Quarterly):</strong> An executive with real budget authority owns outcomes, makes 2-3 funded commitments publicly, and communicates decisions and trade-offs on a regular cadence.</li>
+  <li><strong>Functional Layer (Monthly):</strong> Department heads translate enterprise commitments into specific team-level actions with named owners and simple progress scorecards.</li>
+  <li><strong>Team Layer (Within 2 Weeks):</strong> Managers run a 20-minute structured conversation to identify one team-controlled action and one escalation item with a named owner.</li>
+</ol>
+<h3>The Executive Layer (Quarterly)</h3>
+<p>Someone with actual power needs to own this. Not "provide input" own it. This person sits in quarterly planning meetings and says "what employees told us, what we're funding, what we're not doing and why." Output: 2-3 commitments with real budget, public progress updates that name specific changes, and a decision log so people can see the trade-offs. This has to be a business meeting, not an HR meeting.</p>
+<h3>The Functional Layer (Monthly)</h3>
+<p>Your department heads translate those enterprise commitments into actual work. Marketing fixes onboarding, Engineering changes how code reviews work, Sales adjusts territory assignments — whatever the data says needs fixing. Output: function-specific actions with owners, simple scorecards tracking what moves and what's stuck.</p>
+<h3>The Team Layer (Within 2 Weeks)</h3>
+<p>Managers run a 20-minute conversation with their team. Not a therapy session, not a strategy summit. Just a structured conversation about what the team can control and what needs to get escalated. Output: one thing the team changes, one thing that gets kicked upstairs, and a follow-up date already on the calendar.</p>
+<p>Managers need a script, not a dashboard. Give them the exact words to say, three actions the team can pick from, and one escalation item with a name attached. Make it easier to run the conversation than to avoid it.</p>
+
+<table>
+  <thead><tr><th>What most organisations do</th><th>What actually works</th></tr></thead>
+  <tbody>
+    <tr><td>Share results in a deck, move on</td><td>Assign every result a named owner before the survey closes</td></tr>
+    <tr><td>Run one annual survey</td><td>Run short recurring pulses tied to the business calendar</td></tr>
+    <tr><td>HR owns follow-through</td><td>An executive with budget authority owns outcomes</td></tr>
+    <tr><td>Build a 10-point action plan</td><td>Pick two things, fund them, fix them visibly</td></tr>
+    <tr><td>Go silent after publishing results</td><td>Send regular updates naming what changed and why</td></tr>
+    <tr><td>Give managers a dashboard</td><td>Give managers a script and a 20-minute conversation format</td></tr>
+  </tbody>
+</table>
+
+<h2>What to Track If You Actually Care About Follow-Through</h2>
+<p>Response rates don't tell you if anything changed. Track this instead:</p>
+<ul>
+  <li>How fast did managers discuss results with their teams?</li>
+  <li>What percentage of teams actually picked an action and assigned an owner?</li>
+  <li>How many committed actions got done on time?</li>
+  <li>Do employees even know you made changes? (Ask them.)</li>
+  <li>Are people still participating, or are they checking out?</li>
+</ul>
+<p>These tell you whether your system works or whether you're just generating reports nobody reads.</p>
+
+<h2>How to Recover If You've Already Blown It</h2>
+<p>Burned trust with a survey that went nowhere? You can fix it, but you need to move fast and be visible.</p>
+<p><strong>Weeks 1-2:</strong> Identify one executive who controls budget and can make funding decisions. Pick ONE thing to fix over the next 12 weeks. Train managers on how to have the conversation.</p>
+<p><strong>Weeks 3-6:</strong> Run a short pulse on that one thing. Have managers discuss it within two weeks (not two months). Make small changes teams can see. Route the hard stuff upward with real owners attached.</p>
+<p><strong>Weeks 7-10:</strong> Scale what works. Fund one visible change at the company level. Communicate what changed and why, using actual names and dates.</p>
+<p><strong>Weeks 11-12:</strong> Measure whether anything moved. Decide what to keep, what to stop, and what's next. Put the next cycle on the calendar before this one ends.</p>
+<p>Twelve weeks. One theme. Visible progress. That's how you rebuild credibility.</p>
+
+<h2>The Uncomfortable Truth About Survey Tools</h2>
+<p>The survey tool isn't the cause of the execution gap. But it can make closing that gap significantly easier or harder. Most platforms are built around data collection. They measure well and stop there. The harder part is turning results into decisions, owners, and visible follow-through.</p>
+<p>When we built Vantage Pulse, we started with the assumption that measurement isn't the hard part. Closing the loop is. So we built the platform around that problem. The three-layer framework above maps directly to how Vantage Pulse works: executive-layer dashboards with eNPS trends and demographic heatmaps, department-wise insights for the functional layer, and built-in Action Planning with owners and deadlines for the team layer.</p>
+<p>But the operating rhythm has to exist first. The tool just supports it. If your organization doesn't have executive ownership, cultural willingness to change, and the discipline to focus, no platform will save you. Get those right, and the tool becomes useful.</p>
+
+<h2>What Actually Matters</h2>
+<p>Survey programs die when organizations treat listening as an event and follow-through as optional. They survive when feedback becomes part of the regular business rhythm — when it shows up in the meetings where money gets allocated and priorities get set.</p>
+<p>You don't need a perfect system. You need a consistent one. Pick a few things, fix them visibly, tell people what you did, and do it again next quarter. That's the whole game.</p>
+<p>The alternative is running surveys that train your employees not to trust you. And in a labor market where people quit at the first sign things aren't working, that's not a risk worth taking.</p>
+
+<h2>FAQs</h2>
+<h3>1. What causes employee surveys to fail?</h3>
+<p>Employee surveys fail when there is no system to act on the results. Feedback gets collected, discussed once, and then quietly dropped as other priorities take over. The problem is rarely the survey itself — it is the absence of clear ownership, funded commitments, and visible follow-through.</p>
+<h3>2. How do you fix a survey program that has lost employee trust?</h3>
+<p>Start by picking one issue and fixing it visibly within 12 weeks. Assign an executive owner, run a short follow-up pulse, and communicate what changed using specific names and dates. Employees rebuild trust through evidence, not promises.</p>
+<h3>3. Why do employees stop participating in surveys?</h3>
+<p>Employees disengage from surveys when they see no evidence that their feedback changes anything. After one or two cycles with no visible action, participation drops because the expected return is zero. Consistent follow-through is the only reliable way to sustain response rates over time.</p>
+<h3>4. How long does it take to rebuild trust after a failed survey cycle?</h3>
+<p>Most organisations can begin rebuilding credibility within 12 weeks if they focus on one issue, close the loop with managers within two weeks, and make at least one visible company-level change. Full trust recovery typically takes two to three survey cycles of consistent follow-through.</p>
+<h3>5. What should managers do with employee survey results?</h3>
+<p>Managers should run a short team conversation within two weeks of results being shared. The goal is not to solve everything, but to identify one thing the team can control and one issue to escalate with a named owner. Speed and specificity matter more than comprehensiveness.</p>
+`
+  },
+
+  tools: {
+    url: 'https://www.vantagecircle.com/en/blog/top-employee-pulse-survey-tools/',
+    html: () => `
+<h1>15 Best Employee Pulse Survey Platforms for HR Teams (with 7 of our favourites)</h1>
+<p>Employee surveys play a crucial role in shaping workplace culture and driving engagement. But with so many options available, it can be tough to decide which tool is the best fit for your team. In this blog, we'll explore 15 employee survey tools, also focusing on our top 7 picks — those that stand out for their features, usability, and ability to drive meaningful, actionable feedback.</p>
+<p>This research was conducted by analyzing employee survey tools listed on G2, allowing us to provide you with insights based on real user reviews and industry feedback.</p>
+
+<h2>Top 7 Employee Survey Tools (According to us)</h2>
+<ul>
+  <li><strong>Vantage Pulse</strong> — Best for organizations looking for a real-time, data-driven approach to employee engagement and continuous feedback.</li>
+  <li><strong>SurveyMonkey</strong> — Ideal for creating simple, quick surveys and gathering feedback from teams with straightforward needs.</li>
+  <li><strong>Qualtrics</strong> — A powerful solution for large enterprises with complex survey needs, though it may be more robust than what smaller teams require.</li>
+  <li><strong>Officevibe</strong> — Great for organizations looking to capture ongoing feedback, though it may not provide the depth of analytics offered by others.</li>
+  <li><strong>Culture Amp</strong> — Great for measuring employee sentiment, with a focus on company culture, but might not offer the same level of actionable insights in real-time.</li>
+  <li><strong>15Five</strong> — Primarily focused on performance management and one-on-one meetings, offering less in terms of holistic engagement tracking.</li>
+  <li><strong>Infeedo Amber</strong> — Effective for automating engagement, but lacks some of the real-time, actionable insights found in more comprehensive platforms.</li>
+</ul>
+
+<h2>1. Vantage Pulse</h2>
+<p>Vantage Pulse is a comprehensive employee pulse survey tool that helps any organization listen to the employees' pulse at any stage by collecting, measuring, and acting on real-time employee feedback. It allows the managers to analyze trends, uncover factors of employee turnover, predict behaviors, and ultimately increase employee retention.</p>
+<p><strong>Best for:</strong> Organizations of every size looking for a customizable, all-in-one solution to track ongoing employee engagement.</p>
+<h3>Key features</h3>
+<ul>
+  <li>Automated Employee Lifecycle Surveys</li>
+  <li>AI-Powered sentiment analysis</li>
+  <li>Attrition Risk Indicator</li>
+  <li>Heatmap with multi-level filtering</li>
+  <li>Completely Anonymous</li>
+  <li>Kiosk Survey for deskless workers</li>
+  <li>Anonymous two-way conversations</li>
+</ul>
+<p><strong>Pricing:</strong> Custom pricing according to team size and business needs.</p>
+<p><strong>Things that are great:</strong> Vantage Pulse offers a dedicated support team for setup and implementation. The platform uses AI to analyze employee feedback and predict engagement trends. It automatically triggers lifecycle and milestone surveys at critical touchpoints such as onboarding and tenure anniversaries. Frontline and deskless workers can complete surveys through kiosk stations or SMS-enabled mobile surveys.</p>
+<p><strong>Editor's Verdict:</strong> Vantage Pulse is excellent in the field of employee engagement. It's particularly well-suited for organizations that need an all-encompassing solution to track engagement and gather real-time feedback. With competitive pricing and comprehensive features, it's worth considering for businesses that want to go beyond basic surveys.</p>
+
+<h2>2. SurveyMonkey</h2>
+<p>SurveyMonkey is one of the most widely recognized survey platforms, known for its user-friendly interface and customizable survey options. It is a broad survey platform that serves multiple purposes, with employee surveys being just one of its many features.</p>
+<p><strong>Best for:</strong> Small to medium-sized businesses that need a straightforward, cost-effective tool for employee surveys.</p>
+<p><strong>Things that are great:</strong> Widely praised for its intuitive drag-and-drop interface, making survey creation easy for all users. Offers numerous customizable templates and question types. Multiple sharing options and built-in analytics provide real-time results and charts.</p>
+<p><strong>Things that can be improved:</strong> Advanced features like detailed reporting require expensive paid plans. Some users find team collaboration difficult without upgraded plans.</p>
+<p><strong>Editor's Verdict:</strong> SurveyMonkey offers a simple, affordable solution for smaller teams. While it offers basic survey functionality, it's not as feature-rich as some of the more advanced tools, but it's an excellent entry-level option.</p>
+
+<h2>3. Culture Amp</h2>
+<p>Culture Amp is a robust employee engagement and performance management tool that offers in-depth analytics and custom surveys to measure employee sentiment and track engagement across various stages of the employee lifecycle.</p>
+<p><strong>Best for:</strong> Companies with a data-driven culture that require sophisticated analytics and customized employee feedback.</p>
+<p><strong>Things that are great:</strong> Offers a robust way to collect employee feedback and generate data-driven insights. Effective for structuring and tracking performance discussions and setting goals like OKRs.</p>
+<p><strong>Things that can be improved:</strong> Some users find the platform clunky and difficult to navigate, especially when setting up surveys. The price tag may be restrictive for smaller businesses.</p>
+<p><strong>Editor's Verdict:</strong> Culture Amp is great for companies that need a powerful, data-driven employee engagement tool. While ideal for organizations focused on performance and development, the cost may be prohibitive for smaller businesses.</p>
+
+<h2>4. 15Five</h2>
+<p>15Five is a performance management tool designed to encourage continuous feedback, goal tracking, and employee development. It combines employee surveys with regular check-ins to foster ongoing engagement.</p>
+<p><strong>Best for:</strong> Organizations with a strong focus on employee development and performance, especially those that value continuous feedback.</p>
+<p><strong>Pricing:</strong> $4 per user/month (billed annually).</p>
+<p><strong>Things that are great:</strong> Simple, intuitive interface. Provides effective continuous feedback and goal tracking. Real-time visibility into team morale and challenges.</p>
+<p><strong>Editor's Verdict:</strong> 15Five is a capable tool for teams that prioritize employee development and performance management. Its continuous feedback and goal-setting features make it a great choice for businesses that want to nurture their talent.</p>
+
+<h2>5. Officevibe</h2>
+<p>Officevibe is an intuitive employee engagement tool that uses pulse surveys to measure employee sentiment and provide actionable insights. It's designed to help teams improve communication, trust, and overall workplace culture.</p>
+<p><strong>Best for:</strong> Small to mid-sized companies looking for a simple, easy-to-use tool to gain quick insights and boost employee engagement.</p>
+<p><strong>Pricing:</strong> $5 per user/month.</p>
+<p><strong>Things that are great:</strong> Simple and easy to use, promoting effective team communication. Encourages employee recognition with its "Good Vibes" feature.</p>
+<p><strong>Things that can be improved:</strong> Lacks more detailed reporting capabilities. Pricing is considered high for small businesses.</p>
+<p><strong>Editor's Verdict:</strong> Officevibe is perfect for teams looking for straightforward, no-frills employee survey tools. Its simplicity and affordability make it ideal for small to medium-sized companies.</p>
+
+<h2>6. Amber by inFeedo</h2>
+<p>Amber is an AI-powered chatbot that casually checks in with employees through one-to-one conversations, asking questions like "How was your day?" The bot captures open-ended feedback, applies natural language processing to gauge sentiment, and flags early signs of disengagement so HR can act before issues snowball.</p>
+<p><strong>Best for:</strong> Mid- to large-sized organizations that want an always-on, conversational listening solution rather than scheduled surveys.</p>
+<p><strong>Things that are great:</strong> Human-like conversations boost honesty and engagement by making feedback feel less like a formal survey. Uses AI to identify and address disengagement risks before they become bigger issues.</p>
+<p><strong>Editor's Verdict:</strong> Amber offers a unique, conversational approach to employee engagement, providing valuable sentiment insights through casual check-ins. It's ideal for teams that need proactive feedback and predictive insights.</p>
+
+<h2>7. Qualtrics</h2>
+<p>Qualtrics is an advanced survey platform offering highly customizable surveys and in-depth analytics. It's designed for large enterprises that need to collect and analyze feedback across various employee touchpoints.</p>
+<p><strong>Best for:</strong> Large organizations needing a highly customizable survey platform with robust analytics and reporting.</p>
+<p><strong>Things that are great:</strong> Offers deep customization for surveys and analytics. Advanced reporting and predictive insights. Seamlessly integrates with various HRIS and BI tools.</p>
+<p><strong>Things that can be improved:</strong> Premium pricing that may be prohibitive for small or mid-sized businesses. Requires more setup time and learning.</p>
+<p><strong>Editor's Verdict:</strong> Qualtrics is a powerhouse for organizations that require extensive customization, deep analytics, and robust reporting capabilities. While ideal for large enterprises, its cost and complexity might make it less suitable for smaller businesses.</p>
+
+<h2>8. Microsoft Viva Glint</h2>
+<p>Microsoft Viva Glint is an employee engagement and listening platform embedded within the Microsoft ecosystem. It helps organizations track engagement levels, gather feedback in real-time, and use AI-powered analytics to provide deeper insights into employee sentiment.</p>
+<p><strong>Best for:</strong> Enterprises already using Microsoft 365 that want seamless integration with their existing tools.</p>
+<p><strong>Things that are great:</strong> Uses AI to analyze open-ended feedback with narrative intelligence technology. Seamlessly integrates with Microsoft tools like Teams and Power BI. Covers the entire employee lifecycle from onboarding to exit surveys.</p>
+<p><strong>Editor's Verdict:</strong> Viva Glint is a great choice for organizations already on Microsoft 365, offering seamless integration and AI-driven insights. However, its reliance on Microsoft tools limits its flexibility for teams using other platforms.</p>
+
+<h2>9. Workday Peakon Employee Voice</h2>
+<p>Workday Peakon Employee Voice is an AI-powered platform for measuring employee engagement, capturing feedback, and providing actionable insights to improve organizational performance through continuous pulse surveys and real-time sentiment analysis.</p>
+<p><strong>Best for:</strong> Global enterprises using Workday HCM that want integrated employee feedback and engagement solutions.</p>
+<p><strong>Things that are great:</strong> Provides immediate insights from pulse surveys. Captures feedback from employees across all levels and locations. Integrates seamlessly with Workday's broader HR suite.</p>
+<p><strong>Editor's Verdict:</strong> For large global organizations that use Workday, Peakon is a powerful tool for continuous employee engagement. Its advanced analytics and seamless integration make it an excellent choice for enterprises.</p>
+
+<h2>10. Lattice</h2>
+<p>Lattice is a people success platform that combines performance reviews, employee surveys, goal tracking, and feedback into a single unified platform. It helps teams align with organizational goals and track progress while improving employee engagement.</p>
+<p><strong>Best for:</strong> Mid-sized companies that need an all-in-one platform for performance management, feedback, and employee engagement.</p>
+<p><strong>Things that are great:</strong> Highly regarded for its intuitive interface. Integrates goal setting, performance management, engagement surveys, and career development into a single platform.</p>
+<p><strong>Editor's Verdict:</strong> Lattice is a solid option for mid-sized businesses looking for a comprehensive solution for performance and engagement. Its integration with goal-setting and performance management makes it highly valuable.</p>
+
+<h2>11. Leapsome</h2>
+<p>Leapsome combines performance management, employee engagement, and learning tools into a modular platform. It offers customizable surveys, feedback, and goal-setting features along with AI-powered action recommendations.</p>
+<p><strong>Best for:</strong> Companies that need a flexible and modular platform for employee development, engagement, and feedback tracking.</p>
+<p><strong>Things that are great:</strong> Modular platform for flexibility. Strong UX and user-friendly interface. Rich reporting and insights for performance tracking.</p>
+<p><strong>Editor's Verdict:</strong> Leapsome is ideal for HR teams looking for a flexible and customizable platform that combines engagement, performance, and learning.</p>
+
+<h2>12. TINYpulse</h2>
+<p>TINYpulse is a simple, yet powerful pulse survey tool that helps organizations gather ongoing feedback from employees, allowing managers to check in on a regular basis to measure engagement, satisfaction, and morale in real-time.</p>
+<p><strong>Best for:</strong> Small to mid-sized organizations looking for a simple, quick way to gather frequent feedback and improve employee engagement.</p>
+<p><strong>Things that are great:</strong> Simple, intuitive interface. Anonymous feedback encourages greater transparency and trust. Offers real-time insights into employee sentiment.</p>
+<p><strong>Editor's Verdict:</strong> TINYpulse is a great option for smaller businesses or teams that need a simple, fast, and easy-to-implement tool for gathering employee feedback.</p>
+
+<h2>13. Quantum Workplace</h2>
+<p>Quantum Workplace is an employee engagement platform offering unlimited surveys, pulse checks, and lifecycle surveys. It includes built-in AI to help analyze feedback and generate actionable insights.</p>
+<p><strong>Best for:</strong> Mid-to-large organizations that require continuous feedback and AI-generated insights.</p>
+<p><strong>Key features:</strong> Retention Radar, action planning, employee recognition modules.</p>
+<p><strong>Editor's Verdict:</strong> Quantum Workplace is a great solution for larger organizations looking to engage employees and improve workplace culture. Its comprehensive tools for feedback collection, coupled with AI insights, make it an invaluable asset.</p>
+
+<h2>14. QuestionPro</h2>
+<p>QuestionPro is a comprehensive online survey software offering a dedicated suite of tools for employee experience (EX). It allows organizations to create and deploy engagement pulses, 360-degree feedback, eNPS, and lifecycle surveys with extensive question library and advanced logic.</p>
+<p><strong>Best for:</strong> Organizations of all sizes that need a robust, flexible, and scalable platform for detailed research and feedback across the entire employee lifecycle.</p>
+<p><strong>Things that are great:</strong> Wide array of templates, question types, logic options, and reporting. Consistently helpful and responsive 24/7 customer service. Extensive customization for branding.</p>
+<p><strong>Editor's Verdict:</strong> QuestionPro is a versatile survey tool providing customizable surveys, real-time sentiment analysis, and robust analytics. Its flexibility and advanced features make it a great choice for teams seeking in-depth engagement insights.</p>
+
+<h2>15. Leena AI</h2>
+<p>Leena AI offers an employee engagement solution powered by AI. Through conversational surveys and feedback collection, Leena AI helps HR teams measure engagement levels and gather insights to improve employee experience, automating survey processes and using AI to analyze feedback in real time.</p>
+<p><strong>Best for:</strong> Organizations that want to use AI to enhance their employee engagement surveys and gain actionable insights.</p>
+<p><strong>Things that are great:</strong> AI-driven insights provide deep understanding of employee sentiment. Conversational surveys make the feedback process more interactive and increase response rates.</p>
+<p><strong>Editor's Verdict:</strong> Leena AI's engagement survey tool is ideal for organizations looking to leverage AI to automate and optimize their employee feedback process. It offers a unique, conversational approach to surveys ensuring high participation rates.</p>
+
+<h2>How to Choose the Right Pulse Survey Tool</h2>
+<h3>1. Team Size and Needs</h3>
+<p><strong>Small Teams (under 50 employees):</strong> Look for platforms that are quick to implement and don't overwhelm your HR team with unnecessary features. <strong>Mid-Sized Teams (50-500):</strong> You may need a tool with more customization and deeper insights. <strong>Large Enterprises (500+):</strong> Look for solutions that offer real-time feedback, predictive insights, and the ability to scale.</p>
+<h3>2. Survey Frequency and Type</h3>
+<p>For continuous, real-time feedback, look for tools that specialize in pulse surveys. If you need more comprehensive surveys, choose a tool that offers advanced survey customization and in-depth reporting.</p>
+<h3>3. Integration with Other HR Tools</h3>
+<p>If you're already using HRIS platforms for performance tracking or employee data management, consider a survey tool that integrates easily with these systems. Ensure the tool offers flexible integration options or an open API to connect with your existing HR tech stack.</p>
+<h3>4. Budget Considerations</h3>
+<p>Smaller teams may not require the advanced features of high-end tools. Larger teams with more complex needs may require tools that come with a higher price tag but provide advanced analytics, customization, and scalability.</p>
+<h3>5. Customization and Reporting Needs</h3>
+<p>Look for tools that allow you to customize surveys to suit your specific needs. If you need in-depth analytics, choose a tool that offers comprehensive reporting capabilities, such as segmenting data by department or tracking long-term trends.</p>
+
+<h2>Why Employee Survey Tools Matter</h2>
+<h3>1. Higher Engagement</h3>
+<p>Employees who feel heard are more likely to be engaged in their work. Regular feedback through employee surveys helps keep employees involved, improves morale, and fosters a sense of ownership in the workplace.</p>
+<h3>2. DEI Monitoring</h3>
+<p>Employee surveys provide organizations with valuable insights into their diversity, equity, and inclusion (DEI) efforts. By regularly asking employees about their experiences, organizations can measure inclusivity and identify areas for improvement.</p>
+<h3>3. Lower Attrition</h3>
+<p>By identifying potential issues early, organizations can address concerns before they lead to employee turnover. Employee surveys help HR teams spot disengagement, lack of career development, or other issues that may contribute to higher attrition rates.</p>
+<h3>4. Better Management Enablement</h3>
+<p>With continuous feedback, managers can better understand team morale and engagement, allowing them to act quickly. Pulse surveys allow managers to quickly adjust their approach and ensure their teams remain engaged and productive.</p>
+
+<h2>Conclusion</h2>
+<p>Choosing the right employee survey tool is essential for fostering a positive work environment and driving continuous improvement. Whether you're a small team seeking simplicity or a large organization needing advanced insights, there's a tool out there to meet your needs. By considering factors like team size, survey frequency, budget, and integration capabilities, you can select a platform that not only measures employee engagement but also empowers HR teams to take action.</p>
+
+<h2>FAQs</h2>
+<h3>Which survey tool is the best?</h3>
+<p>The best tool depends on your organization's needs. Smaller teams may prefer straightforward, cost-effective tools, while larger organizations may need more comprehensive, feature-rich platforms with advanced reporting and analytics.</p>
+<h3>Can these tools help track changes in employee satisfaction over time?</h3>
+<p>Yes, most employee survey tools offer the ability to track employee satisfaction over time, allowing organizations to measure shifts in engagement and adjust strategies accordingly.</p>
+`
+  },
+
+  dashboard: {
+    url: 'https://www.vantagecircle.com/en/blog/employee-survey-dashboard/',
+    html: () => `
+<h1>Employee Survey Dashboards Explained: Your Complete Guide to Smarter Feedback Insights</h1>
+
+<h2>What Does an Employee Survey Dashboard Do?</h2>
+<p>Feedback collection in organisations began in earnest during the 1920s, when industrial companies started using worker-attitude surveys to track morale. Today, a specialised employee survey dashboard brings that capability into modern HR practice with speed and scale.</p>
+<h3>Core Functionality</h3>
+<p><strong>Data aggregation</strong> — The dashboard gathers responses from every touchpoint, annual surveys, pulse surveys, onboarding feedback, even kiosk submissions, into one unified system. Instead of juggling Excel sheets or digging through email attachments, HR teams see all input aligned on one screen.</p>
+<p><strong>Visualization</strong> — Dashboards translate data into visual cues: heatmaps that spotlight satisfaction gaps, line graphs that reveal engagement trends, and comparison charts that show how teams evolve over time. Visual clarity saves hours of manual interpretation.</p>
+<p><strong>Real-time monitoring</strong> — Feedback loses impact when it arrives months later. A dashboard updates as employees respond, giving HR a live pulse of morale.</p>
+<p><strong>Drill-down capability</strong> — Surface averages hide stories. A powerful dashboard lets leaders zoom in from company-wide sentiment to the micro-level: departments, regions, or tenure bands.</p>
+<p><strong>Alerting and benchmarking</strong> — When engagement or satisfaction drops below a defined level, the system flags it. Benchmarking lets HR compare internal data to past surveys or industry standards from sources like Gartner or SHRM.</p>
+
+<h2>Features Not Provided by All Survey Tools</h2>
+<h3>1. Sentiment Analysis that Understands Context</h3>
+<p>Modern dashboards can interpret the language employees use in open-ended responses. Research found that organizations tracking employee sentiment saw an 18% rise in productivity and up to 40% lower turnover. When a team's scores remain stable but sentiment turns negative, the system flags it before morale begins to decline.</p>
+<h3>2. Role and Region Based Filtering</h3>
+<p>Dashboards that allow filtering by job level, department, or geography help leaders see patterns unique to each group. Engagement drivers for a warehouse team in Texas often differ from those for a remote tech team in Seattle.</p>
+<h3>3. Integrated View Across HR Systems</h3>
+<p>A report noted that 51% of HR professionals believe their HR technology is not well integrated, leading to fragmented insights. When survey dashboards connect with HRIS, learning, or performance systems, they build a complete view linking engagement data with retention and skill development.</p>
+<h3>4. Predictive Indicators for Early Warnings</h3>
+<p>Predictive analytics help identify risks before they surface. Incorporating this capability allows HR teams to detect early warning signs, such as declining participation rates or spikes in negative sentiment about leadership.</p>
+<h3>5. Lifecycle Mapping for Employee Experience</h3>
+<p>A mature dashboard can visualize how employee sentiment evolves from onboarding to exit. This lifecycle view highlights when engagement tends to drop — such as after the first year or during restructuring periods.</p>
+<h3>6. Built-In Action Tracking</h3>
+<p>Dashboards that include built-in action tracking enable managers to assign responsibility, monitor progress, and close the feedback loop. This reinforces accountability and ensures that employees see visible changes after sharing their feedback.</p>
+
+<h2>10 Key Metrics Every Dashboard Should Include</h2>
+<h3>1. Employee Engagement Score</h3>
+<p>This score reflects how emotionally and mentally connected employees feel to their work and organization. According to Gallup, engagement sits at 31% among U.S. employees, showing that most teams still have untapped potential.</p>
+<h3>2. Participation Rate</h3>
+<p>A consistent participation rate above 70% is considered healthy across industries. When participation drops, it can signal survey fatigue, lack of trust, or weak communication from leadership.</p>
+<h3>3. eNPS (Employee Net Promoter Score)</h3>
+<p>Derived from the customer NPS model, eNPS measures employee advocacy. Leading organizations aim for +40 or higher. Tracking eNPS trends reveals whether employees are becoming advocates or disengaged critics.</p>
+<h3>4. Manager Effectiveness</h3>
+<p>Studies show that relationships with managers account for nearly 70% of variance in team engagement. Dashboards that isolate manager-related questions help HR detect where leadership coaching or support is needed most.</p>
+<h3>5. Turnover Risk Indicators</h3>
+<p>Employees who mark low scores in recognition, growth, or manager communication often show higher turnover probability within three to six months. Linking survey data with HRIS exit data exposes patterns before attrition accelerates.</p>
+<h3>6. Sentiment by Theme or Category</h3>
+<p>Dashboards that categorize comments by topic — workload, communication, inclusion, or well-being — help HR understand the story behind the scores. A stable engagement score might mask growing frustration around workload balance.</p>
+<h3>7. Diversity and Inclusion Metrics</h3>
+<p>McKinsey (2023) found that companies in the top quartile for gender diversity were 39% more likely to outperform financially. Tracking belonging and inclusion indicators helps organizations identify where representation and equity need attention.</p>
+<h3>8. Remote Work Experience Index</h3>
+<p>Hybrid and remote work have reshaped engagement dynamics. Dashboards that separate metrics for remote, hybrid, and on-site employees uncover experience gaps that may not appear in overall averages.</p>
+<h3>9. Well-Being and Burnout Scores</h3>
+<p>According to Deloitte's 2024 Well-Being Report, 52% of employees feel emotionally exhausted, while only 43% believe their organizations support their mental health adequately. Dashboards that track wellness survey questions allow HR to adjust workloads or policies before burnout affects performance.</p>
+<h3>10. Open Feedback Volume and Sentiment Shift</h3>
+<p>The volume of open comments and their sentiment trajectory help gauge communication openness. A sudden drop in comment volume may indicate fear of speaking up, while consistent positive sentiment signals psychological safety.</p>
+
+<h2>How to Build or Customize a Dashboard</h2>
+<h3>1. Choose the Right Platform</h3>
+<p>Start by picking a dashboard platform that connects easily with the tools you already use. Look for one that syncs with your HRIS, performance management software, or payroll system.</p>
+<h3>2. Select Your Metrics</h3>
+<p>Decide what you want to track. Common metrics include engagement score, eNPS, turnover risk, manager effectiveness, and employee well-being. Adjust the metrics to match your company's priorities — if you're hiring fast, focus on onboarding sentiment.</p>
+<h3>3. Segment Your Data</h3>
+<p>Filter by department, role, location, or tenure to spot patterns. Maybe one team shows low engagement or a specific region reports higher burnout. These insights help you take targeted action instead of guessing what's wrong.</p>
+<h3>4. Set Up Feedback Channels</h3>
+<p>Give employees multiple ways to share feedback: quick pulse surveys for regular updates, kiosk or mobile surveys for on-the-go responses, and 360-degree feedback for well-rounded input. More feedback channels mean more reliable insights.</p>
+<h3>5. Customize for Your Needs</h3>
+<p>Make the dashboard reflect what matters most to your organization. If employee well-being is a priority, highlight data on stress levels, workload, and work-life balance. Many platforms let you filter by time frame, team, or location.</p>
+<h3>6. Make It Actionable</h3>
+<p>A good dashboard doesn't just display numbers — it drives action. Include tools to assign tasks, track progress, and follow up on survey results. When managers can see what needs attention and what's improving, they're more likely to act quickly and consistently.</p>
+
+<h2>Using a Pre-Built Dashboard within a Survey Platform</h2>
+<h3>1. Instant Access to Key Insights</h3>
+<p>Pre-built dashboards give HR teams immediate visibility into core metrics. With engagement, satisfaction, and manager effectiveness already configured, you can see a complete picture of employee sentiment right away.</p>
+<h3>2. Simplified Data Interpretation</h3>
+<p>Instead of digging through spreadsheets, pre-built dashboards display survey data through visuals like charts, heatmaps, and trend lines, making it easier to spot patterns and shifts in engagement quickly.</p>
+<h3>3. Built on Proven Best Practices</h3>
+<p>Pre-built dashboards are often built using metrics that have already been tested across industries. They focus on what matters most — engagement, satisfaction, and turnover risk — while still providing the flexibility to drill into the data that matters most to your organization.</p>
+<h3>4. Smooth Integration with Existing Systems</h3>
+<p>These dashboards typically connect easily to your existing HR tools. Vantage Pulse, for instance, integrates with HRIS platforms, performance management systems, and other HR software, helping HR teams spend less time managing data and more time acting on it.</p>
+<h3>5. Real-Time Insights and Faster Action</h3>
+<p>Pre-built dashboards often include real-time tracking, allowing HR teams to see trends as they happen. Instead of waiting until the end of a survey cycle, you can monitor engagement changes and respond quickly.</p>
+<h3>6. Scalable for Growth</h3>
+<p>As your organization expands, a pre-built dashboard helps you stay consistent. You can monitor feedback across multiple teams, locations, or business units without losing visibility.</p>
+
+<h2>5 Common Challenges</h2>
+<h3>1. Misinterpreting the Data</h3>
+<p>One of the biggest challenges is drawing the wrong conclusions from what the dashboard shows. Numbers don't tell the full story without context. A sudden drop in engagement might be caused by something external, such as seasonal workload changes or company-wide restructuring. Pair survey numbers with open-ended feedback, manager observations, or external benchmarks.</p>
+<h3>2. Too Much Data, Not Enough Focus</h3>
+<p>Dashboards can display dozens of charts, metrics, and filters. When HR teams try to interpret everything at once, it can lead to analysis paralysis. Focus on a few metrics that connect directly to your HR or business priorities. If turnover is a concern, prioritize engagement, eNPS, and exit survey data.</p>
+<h3>3. No Clear Follow-Up</h3>
+<p>Even the best dashboards lose value if the insights don't lead to action. Create action plans directly tied to specific dashboard findings, and track progress regularly. If engagement in one team drops, schedule check-ins, launch a feedback session, or set a leadership development initiative.</p>
+<h3>4. Low Stakeholder Buy-In</h3>
+<p>When senior leaders or managers don't trust or understand dashboard insights, they're less likely to act on them. Present data in leadership meetings, link it to KPIs, and share examples of improvements driven by past feedback. When stakeholders see that dashboard insights lead to measurable change, buy-in naturally follows.</p>
+<h3>5. Inconsistent Data Quality</h3>
+<p>Reliable insights depend on reliable data. Low survey participation, inconsistent formats, or incomplete responses can distort results. Improving data quality starts with encouraging consistent participation and standardizing how surveys are conducted.</p>
+<h3>How to Overcome These Challenges</h3>
+<ul>
+  <li><strong>Train Your Team:</strong> Provide HR professionals with training on reading and interpreting data and linking insights to company goals.</li>
+  <li><strong>Set Clear Objectives:</strong> Align every dashboard metric with a specific business or HR objective.</li>
+  <li><strong>Build a Feedback Loop:</strong> Establish ongoing review processes, track action items, and monitor progress.</li>
+  <li><strong>Involve Stakeholders Early:</strong> Include leaders in discussions about dashboard goals and data interpretation.</li>
+  <li><strong>Maintain Data Quality:</strong> Work closely with IT and operations teams to ensure accurate, consistent data flow.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>Employee survey dashboards give HR teams a practical way to turn feedback into action. By bringing all survey data together and visualizing it in real time, these tools help HR professionals spot trends, uncover problem areas, and make informed decisions that directly improve engagement and company culture.</p>
+<p>Still, the dashboard itself isn't the solution — the action that follows is. The value comes from consistently reviewing the data, connecting it to business goals, and taking deliberate steps to improve the employee experience. When HR teams use dashboards effectively, they gain more than just reports. They gain a system for listening, responding, and continuously improving how people work and feel within the organization.</p>
+`
+  }
+};
+
+function openReader(id) {
+    const article = articles[id];
+    if (!article) return;
+
+    const loading = document.getElementById('readerLoading');
+    const content = document.getElementById('readerContent');
+    const extLink = document.getElementById('readerExtLink');
+
+    extLink.href = article.url;
+    content.innerHTML = article.html();
+    content.scrollTop = 0;
+    loading.style.display = 'none';
+    content.style.display = 'block';
+
+    document.getElementById('readerBackdrop').classList.add('open');
+    document.getElementById('readerPanel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeReader() {
+    document.getElementById('readerBackdrop').classList.remove('open');
+    document.getElementById('readerPanel').classList.remove('open');
+    document.getElementById('readerContent').innerHTML = '';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeReader(); closeCmsOverlay(); closeCollateralOverlay(); }
+    if (document.getElementById('cmsOlPanel').classList.contains('open')) {
+        if (e.key === 'ArrowLeft') cmsNav(-1);
+        if (e.key === 'ArrowRight') cmsNav(1);
+    }
+    if (document.getElementById('collOlPanel').classList.contains('open')) {
+        if (e.key === 'ArrowLeft') collNav(-1);
+        if (e.key === 'ArrowRight') collNav(1);
+    }
+});
+
+let cmsSlide = 0;
+
+function openCmsOverlay() {
+    document.getElementById('cmsOlBackdrop').classList.add('open');
+    document.getElementById('cmsOlPanel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    cmsGoTo(0);
+}
+
+function closeCmsOverlay() {
+    document.getElementById('cmsOlBackdrop').classList.remove('open');
+    document.getElementById('cmsOlPanel').classList.remove('open');
+    if (!document.getElementById('readerPanel').classList.contains('open')) {
+        document.body.style.overflow = '';
+    }
+}
+
+function cmsGoTo(index) {
+    cmsSlide = index;
+    document.querySelectorAll('.cms-ol-img').forEach((el, i) =>
+        el.classList.toggle('active', i === index));
+    document.querySelectorAll('.cms-ol-thumb').forEach((el, i) =>
+        el.classList.toggle('active', i === index));
+}
+
+function cmsNav(dir) { cmsGoTo((cmsSlide + dir + 3) % 3); }
+
+/* ── Image protection ── */
+document.addEventListener('contextmenu', e => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+});
+document.addEventListener('dragstart', e => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+});
+document.addEventListener('keyup', e => {
+    /* Detect PrintScreen key — show brief warning */
+    if (e.key === 'PrintScreen') {
+        navigator.clipboard?.writeText('').catch(() => {});
+    }
+});
+
+const collDocs = {
+    'sales-deck': {
+        label: 'Sales Deck',
+        title: 'Vantage Pulse Sales Presentation',
+        desc: 'Full pitch deck for sales conversations. Opens with the disengagement cost problem, moves through product capabilities and competitive positioning, and closes with a direct book-a-demo CTA.',
+        pages: Array.from({length:14}, (_,i) => 'collaterals/previews/sales-deck-p' + String(i+1).padStart(2,'0') + '.jpg')
+    },
+    'brochure-2pager': {
+        label: '2-Page Brochure',
+        title: 'Product Overview: Get Real Feedback. Make Real Change.',
+        desc: 'Leave-behind for HR and executive buyers. Leads with the ROI case, covers the three-persona feature breakdown (Employees, HR Teams, Executives), and closes with a compliance badge strip covering ISO 27001, GDPR, SOC 2, and HIPAA.',
+        pages: ['collaterals/previews/brochure-2pager-p01.jpg','collaterals/previews/brochure-2pager-p02.jpg']
+    },
+    'brochure-1pager': {
+        label: '1-Page Brief',
+        title: 'Unlock the Full Power of Recognition with Vantage Pulse',
+        desc: 'Targeted one-pager for prospects already running a recognition program but not measuring its impact. Positions Vantage Pulse as the missing feedback layer.',
+        pages: ['collaterals/previews/brochure-1pager-p01.jpg']
+    }
+};
+
+let collSlide = 0;
+let collTotal = 1;
+let collCurrentLabel = '';
+
+function collOpenDoc(slug) {
+    const doc = collDocs[slug];
+    collSlide = 0;
+    collTotal = doc.pages.length;
+    collCurrentLabel = doc.label;
+
+    document.getElementById('collOlImgs').innerHTML = doc.pages.map((p, i) =>
+        '<img src="' + p + '" class="coll-ol-img' + (i===0?' active':'') + '" draggable="false" />'
+    ).join('');
+
+    document.getElementById('collOlThumbs').innerHTML = doc.pages.map((p, i) =>
+        '<img src="' + p + '" class="coll-ol-thumb' + (i===0?' active':'') + '" draggable="false" onclick="collGoTo(' + i + ')" />'
+    ).join('');
+
+    document.getElementById('collOlSlide').innerHTML =
+        '<span class="coll-doc-type-badge">' + doc.label + '</span>' +
+        '<h3>' + doc.title + '</h3>' +
+        '<p>' + doc.desc + '</p>';
+
+    document.getElementById('collCounter').textContent = doc.label + ' — 1 / ' + doc.pages.length;
+
+    document.getElementById('collPicker').style.display = 'none';
+    document.getElementById('collViewer').style.display = 'block';
+}
+
+function collBackToPicker() {
+    document.getElementById('collViewer').style.display = 'none';
+    document.getElementById('collPicker').style.display = 'block';
+}
+
+function collGoTo(index) {
+    const imgs   = document.querySelectorAll('#collOlImgs .coll-ol-img');
+    const thumbs = document.querySelectorAll('#collOlThumbs .coll-ol-thumb');
+    imgs[collSlide].classList.remove('active');
+    thumbs[collSlide].classList.remove('active');
+    collSlide = (index + imgs.length) % imgs.length;
+    imgs[collSlide].classList.add('active');
+    thumbs[collSlide].classList.add('active');
+    thumbs[collSlide].scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'});
+    document.getElementById('collCounter').textContent = collCurrentLabel + ' — ' + (collSlide+1) + ' / ' + collTotal;
+}
+
+function collNav(dir) { collGoTo(collSlide + dir); }
+
+function openCollateralOverlay() {
+    document.getElementById('collPicker').style.display = 'block';
+    document.getElementById('collViewer').style.display = 'none';
+    document.getElementById('collOlBackdrop').classList.add('open');
+    document.getElementById('collOlPanel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCollateralOverlay() {
+    document.getElementById('collOlBackdrop').classList.remove('open');
+    document.getElementById('collOlPanel').classList.remove('open');
+    if (!document.getElementById('readerPanel').classList.contains('open')) {
+        document.body.style.overflow = '';
+    }
+}
+</script>
+
+</body>
+</html>
