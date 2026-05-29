@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahil Khan — Content Marketing</title>
-    <meta name="description" content="Content Marketing Associate with 1.5+ years in B2B SaaS. Content strategy, SEO, and AI-powered marketing systems.">
+    <meta name="description" content="Content Marketing Associate with 2+ years in B2B SaaS. Content strategy, SEO, and AI-powered marketing systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -269,13 +269,16 @@
         .btn-ghost:hover { background: rgba(255,255,255,0.12); color: #fff; }
 
         .hero-stats {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem 2rem;
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.08);
             width: 100%;
+        }
+
+        .hero-stats > div {
+            text-align: center;
         }
 
         .hero-stat-value {
@@ -1406,7 +1409,13 @@
             .nav-links { display: none; }
             .blog-grid { grid-template-columns: 1fr; }
             .projects-grid { grid-template-columns: 1fr; }
-            .hero-stats { gap: 1.5rem; }
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem 1rem;
+            }
+            .hero-stats > div:last-child {
+                grid-column: 1 / -1;
+            }
             .reader-panel { width: 100%; }
         }
     </style>
@@ -1437,11 +1446,7 @@
 <!-- ── HERO ─────────────────────────────────────── -->
 <section class="hero">
     <div class="hero-inner">
-        <div class="hero-badge">
-            <span class="badge-dot"></span>
-            Open to new roles
-        </div>
-        <h1>Hey, I'm Sahil Khan 👋</h1>
+<h1>Hey, I'm Sahil Khan 👋</h1>
         <div class="hero-underline"></div>
         <p class="hero-role">B2B SaaS Content &amp; GTM Foundations.</p>
         <p class="hero-sub">I build marketing from scratch: brand voice, SEO content, GTM strategy, and AI-powered workflows. Currently building the marketing foundation for Vantage Pulse at Vantage Circle.</p>
@@ -1462,7 +1467,7 @@
                 <span class="hero-stat-label">Organic leads driven</span>
             </div>
             <div>
-                <span class="hero-stat-value"><em>1.5+</em> yrs</span>
+                <span class="hero-stat-value"><em>2+</em> yrs</span>
                 <span class="hero-stat-label">B2B SaaS experience</span>
             </div>
             <div>

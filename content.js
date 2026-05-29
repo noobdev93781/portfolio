@@ -86,15 +86,13 @@ const articles = {
   <tbody>
     <tr><td><strong>Employee sentiment</strong></td><td>The emotional state of your workforce right now</td><td>Always on — shifts continuously</td></tr>
     <tr><td><strong>Employee engagement</strong></td><td>Commitment to and investment in the job and organisation</td><td>Captured at a moment in time</td></tr>
-    <tr><td><strong>Employee morale</strong></td><td>Team spirit and collective mood</td><td>Tied to a specific event or period</td></tr>
+    <tr><td><strong>Employee morale</strong></td><td>Team spirit and collective mood, often tied to a specific event or period</td><td>Tied to a specific event or period</td></tr>
   </tbody>
 </table>
 
 <p>Sentiment is the broadest of the three. An employee can score high on engagement, work hard, and meet every target while holding negative sentiment about how the organisation treated a colleague, where they see their career going, or whether leadership is being straight with them. The engagement score misses it. The sentiment score catches it.</p>
 
-<blockquote>
-<p>Employee sentiment is how your workforce actually feels, as opposed to how productive they appear or how committed they look on paper. It is the signal that precedes the behaviour.</p>
-</blockquote>
+<blockquote><p>Employee sentiment is how your workforce actually feels, as opposed to how productive they appear or how committed they look on paper. It is the signal that precedes the behaviour.</p></blockquote>
 
 <h2>Why Employee Sentiment Analysis Matters</h2>
 
@@ -106,7 +104,7 @@ const articles = {
 
 <p><strong>Productivity.</strong> Gallup's meta-analysis of 456 studies across 276 organisations found that business units in the top quartile for engagement show <strong>18% higher productivity</strong> and <strong>23% greater profitability</strong> than those in the bottom quartile. They also record <strong>81% less absenteeism</strong>. These are not marginal differences. They are the difference between a team that delivers and one that just shows up.</p>
 
-<p><strong>Equity and inclusion.</strong> Aggregated data hides inequity. A company-wide sentiment score of 70 looks healthy until you split it by department, geography, or demographic group. Properly segmented sentiment data reveals where different groups are experiencing the organisation differently. Without that view, disparities stay invisible until they become complaints or attrition.</p>
+<p><strong>Equity and inclusion.</strong> Aggregated data hides inequity. A company-wide sentiment score of 70 looks healthy until you split it by department, geography, or demographic group. Properly segmented sentiment data reveals where different groups are experiencing the organisation differently. Without that view, disparities stay invisible until they become complaints or attrition. Sentiment data is one of the most reliable ways to surface those structural factors.</p>
 
 <p><strong>Change management.</strong> Restructures, leadership transitions, and return-to-office policies all shift how people feel about work. Continuous sentiment tracking tells you which teams absorbed a change well and which are still unsettled, so you can direct communication and support where it is actually needed.</p>
 
@@ -114,23 +112,29 @@ const articles = {
 
 <table>
   <thead>
-    <tr><th></th><th>Thriving</th><th>Watch closely</th><th>At risk</th></tr>
+    <tr><th>Status</th><th>Characteristics</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Positive</strong></td><td>Trusts leadership, refers colleagues for roles, high survey participation, strong eNPS promoter</td><td></td><td></td></tr>
-    <tr><td><strong>Neutral</strong></td><td></td><td>Does minimum required, disengaging quietly, responds to nudges, passive on eNPS</td><td></td></tr>
-    <tr><td><strong>Negative</strong></td><td></td><td></td><td>Skips surveys, rising absenteeism, disengaged in meetings, active attrition risk</td></tr>
+    <tr><td><strong>Positive (Thriving)</strong></td><td>Trusts leadership; Refers colleagues for roles; High survey participation; Strong eNPS promoter</td></tr>
+    <tr><td><strong>Neutral (Watch closely)</strong></td><td>Does minimum required; Disengaging quietly; Responds to nudges; Passive on eNPS</td></tr>
+    <tr><td><strong>Negative (At risk)</strong></td><td>Skips surveys; Rising absenteeism; Disengaged in meetings; Active attrition risk</td></tr>
   </tbody>
 </table>
+
+<p>According to Gallup's State of the Global Workplace 2024, <strong>23%</strong> of employees globally are engaged, <strong>62%</strong> are not engaged, and <strong>15%</strong> are actively disengaged. Engagement and sentiment are not the same metric, but these figures reveal the scale of the problem sentiment data needs to address. The <strong>62%</strong> in the middle is where most organisations are losing ground without realising it.</p>
+
+<p>Not all negative sentiment looks the same. Not all positive sentiment means the same thing.</p>
 
 <h3>Positive Sentiment</h3>
 <p>Employees holding positive sentiment trust the people they work for, feel recognised for their contributions, and believe the organisation has their interests in mind. They absorb uncertainty better than most, refer colleagues for open roles, and tend to speak positively about the organisation externally. This is not loyalty purchased by pay. It is the product of consistent, fair treatment over time.</p>
 
 <h3>Neutral Sentiment</h3>
-<p>Neutral sentiment is the category most organisations underestimate. These employees are not unhappy enough to leave but not invested enough to contribute meaningfully. Gallup research found that at least <strong>50%</strong> of the US workforce qualifies as "quiet quitters": people who do their job and nothing more. A targeted nudge can shift them. Left alone for long enough, they tend to drift toward negative.</p>
+<p>Neutral sentiment is the category most organisations underestimate. These employees are not unhappy enough to leave but not invested enough to contribute meaningfully. Gallup research found that at least <strong>50%</strong> of the US workforce qualifies as "quiet quitters": people who do their job and nothing more. That is the neutral tier made measurable. A targeted nudge can shift them. A new project, direct recognition, or a development conversation often does it. Left alone for long enough, they tend to drift toward negative.</p>
+<p>Neutral sentiment is also where disengagement quietly begins. Watch participation rates. When a previously engaged team starts returning incomplete surveys or skipping pulse check-ins, that is the signal.</p>
 
 <h3>Negative Sentiment</h3>
-<p>Negative sentiment is not always loud. Sometimes it is a team that goes quiet in meetings. Sometimes it is a spike in short-term sick leave. A 2022 MIT Sloan Management Review study found that a toxic workplace culture is <strong>10.4 times</strong> more predictive of attrition than compensation. Negative sentiment is the early signal of that toxicity forming.</p>
+<p>Negative sentiment is not always loud. Sometimes it is a team that goes quiet in meetings. Sometimes it is a spike in short-term sick leave. Sometimes it is a department where survey participation drops to single digits while everyone assures their manager that things are fine.</p>
+<p>A 2022 MIT Sloan Management Review study found that a toxic workplace culture is <strong>10.4 times</strong> more predictive of attrition than compensation. Negative sentiment is the early signal of that toxicity forming. The most actionable discovery from sentiment data is often not the company-wide average but the outlier department sitting twenty points below everyone else. That is where the attrition risk lives.</p>
 
 <h2>How to Measure Employee Sentiment</h2>
 
@@ -142,23 +146,29 @@ const articles = {
   </thead>
   <tbody>
     <tr><td>Pulse surveys</td><td>Quantitative</td><td>Real-time tracking, trend detection</td><td>Weekly or monthly</td><td>Low depth per question</td></tr>
-    <tr><td>Annual engagement surveys</td><td>Quantitative</td><td>Deep benchmarking</td><td>Yearly</td><td>Data is stale by the time it is reviewed</td></tr>
+    <tr><td>Annual engagement surveys</td><td>Quantitative</td><td>Deep benchmarking, comprehensive coverage</td><td>Yearly</td><td>Data is stale by the time it is reviewed</td></tr>
     <tr><td>eNPS</td><td>Quantitative</td><td>Loyalty and advocacy measurement</td><td>Quarterly</td><td>Single metric with no explanatory power alone</td></tr>
     <tr><td>Open-ended survey questions</td><td>Qualitative</td><td>Context, nuance, root cause discovery</td><td>Any survey</td><td>Requires analysis time or AI processing</td></tr>
-    <tr><td>Focus groups and interviews</td><td>Qualitative</td><td>Exploratory research</td><td>Ad hoc</td><td>Not scalable; subject to social desirability bias</td></tr>
+    <tr><td>Focus groups and interviews</td><td>Qualitative</td><td>Exploratory research, testing hypotheses</td><td>Ad hoc</td><td>Not scalable; subject to social desirability bias</td></tr>
     <tr><td>Internal social listening</td><td>Qualitative</td><td>Candid, unprompted signal from Slack, Teams, etc.</td><td>Continuous</td><td>Difficult to analyse at scale without AI</td></tr>
   </tbody>
 </table>
 
 <h3>The Employee Sentiment Score</h3>
-<p>A sentiment score quantifies where your workforce sits on a spectrum from negative to positive, typically expressed as a number between 0 and 100. Most platforms calculate it from a combination of survey response ratings, open-ended response sentiment (AI classifies each response as positive, neutral, or negative), and eNPS as a cross-check on overall advocacy.</p>
-
-<p>No universal benchmark exists for what constitutes a "good" score. What matters more than the absolute number is the trend over time and the variance between departments. A company-wide score of 72 can look healthy until you see that one department is sitting at 18.</p>
+<p>A sentiment score quantifies where your workforce sits on a spectrum from negative to positive, typically expressed as a number between 0 and 100. Most platforms calculate it from a combination of:</p>
+<ul>
+  <li>Survey response ratings across categories like wellbeing, manager relationship, and recognition</li>
+  <li>Open-ended response sentiment (AI classifies each response as positive, neutral, or negative)</li>
+  <li>eNPS as a cross-check on overall advocacy</li>
+</ul>
+<p>No universal benchmark exists for what constitutes a "good" score. Industry, company size, and recent events all shape the baseline. What matters more than the absolute number is the trend over time and the variance between departments. A company-wide score of 72 can look healthy until you see that one department is sitting at 18.</p>
 
 <h3>How Often to Measure</h3>
-<p>Quarterly is the minimum for meaningful trend data. Monthly pulse surveys give faster signal without meaningful fatigue risk when kept to under five minutes. For teams going through significant change, monthly or fortnightly check-ins let you track the impact in near-real time.</p>
+<p>Quarterly is the minimum for meaningful trend data. Monthly pulse surveys give faster signal without meaningful fatigue risk when kept to under five minutes. For teams going through significant change (a restructure, a leadership transition, a policy shift), monthly or fortnightly check-ins let you track the impact in near-real time. Kept short and well-timed, pulse surveys carry minimal fatigue risk.</p>
 
 <h2>Employee Sentiment Survey Questions: 15 Examples</h2>
+
+<p>The quality of your questions determines the quality of your data. These fifteen questions are organised by category and written to reduce social desirability bias and generate honest responses.</p>
 
 <h3>Engagement</h3>
 <ol>
@@ -199,42 +209,59 @@ const articles = {
   <li>Do you see a clear path for advancement at this organisation?</li>
 </ol>
 
+<p>Run these across your main engagement categories and add two or three open-ended questions at the end. The open-ended responses are where you find out why the scores look the way they do.</p>
+
 <h2>How to Analyse Employee Sentiment Data</h2>
 
+<p>Collecting workforce sentiment data is straightforward. The employee sentiment analysis that turns it into decisions is where most programmes stall.</p>
+
 <ol>
-  <li><strong>Segment before you summarise.</strong> A company-wide average almost always misleads. Always break the data down by department, location, tenure, and role level before drawing any conclusions.</li>
-  <li><strong>Look for outliers, not averages.</strong> The average might be 70. The outlier is the department sitting at 22. That is where to start.</li>
-  <li><strong>Cross-reference with operational metrics.</strong> Low sentiment in a department with rising absenteeism or declining output confirms the signal.</li>
-  <li><strong>Read the open-ended responses.</strong> Numbers tell you where the problem is. Open-ended text tells you why.</li>
-  <li><strong>Get the data to the right people.</strong> Department-level sentiment goes to the department manager. Company-level patterns go to leadership.</li>
+  <li><strong>Segment before you summarise.</strong> A company-wide average almost always misleads. Healthy departments mask struggling ones. Always break the data down by department, location, tenure, and role level before drawing any conclusions.</li>
+  <li><strong>Look for outliers, not averages.</strong> The average might be 70. The outlier is the department sitting at 22. That is where to start. Averages describe the middle. Outliers describe the risk.</li>
+  <li><strong>Cross-reference with operational metrics.</strong> Low sentiment in a department with rising absenteeism or declining output confirms the signal. Correlation between sentiment data and hard business metrics makes the case to leadership in a language they already use.</li>
+  <li><strong>Read the open-ended responses.</strong> Numbers tell you where the problem is. Open-ended text tells you why. AI-powered tools process hundreds of responses in seconds, classify them as positive, neutral, or negative, and surface recurring themes. What used to take an HR analyst several days now takes minutes.</li>
+  <li><strong>Get the data to the right people.</strong> Department-level sentiment goes to the department manager. Company-level patterns go to leadership. Without this routing step, sentiment data sits in an HR dashboard and changes nothing.</li>
 </ol>
+
+<h2>How Vantage Pulse Does It</h2>
+
+<p>Most platforms hand you a workplace sentiment score. What HR teams actually need is to see which department is at risk, understand why, and have a structured way to respond to the individual feedback behind the numbers.</p>
+
+<p>The heatmap displays every department's scores across every engagement category, colour-coded from red (critical) to green (healthy). A manager reviewing it does not need to interpret numbers. The visual is immediate. In one deployment, the heatmap surfaced a Technical Support department engagement score of <strong>4 out of 100</strong>. That figure had been invisible in aggregate reporting.</p>
+
+<p>Surfacing the score is the easy part. Who sees it, what they do with it, and whether employees ever hear back is what determines whether sentiment measurement actually changes anything.</p>
 
 <h2>Turning Sentiment Into Action</h2>
 
-<p><strong>When sentiment is positive:</strong> Acknowledge it and understand exactly what is driving it. Protect those conditions deliberately during periods of change. High sentiment is not self-sustaining.</p>
+<p>Measurement is the diagnostic. Knowing how to improve employee sentiment based on what the data shows is the actual job.</p>
 
-<p><strong>When sentiment is neutral:</strong> Look at the open-ended responses. Neutral employees are often waiting for a signal that the organisation is worth committing to. A development conversation, a new responsibility, or direct and specific recognition can shift the balance.</p>
+<p><strong>When sentiment is positive:</strong> Acknowledge it and understand exactly what is driving it. Is it a particular manager? The team culture? The type of work? Protect those conditions deliberately during periods of change. High sentiment is not self-sustaining. It needs to be maintained. The role of managers matters here more than most organisations realise.</p>
 
-<p><strong>When sentiment is negative:</strong> Do not rush to reassure. Understand the root cause first. Address the cause, not the symptom, and use follow-up pulse surveys to measure whether the change had any effect.</p>
+<p><strong>When sentiment is neutral:</strong> Look at the open-ended responses. Neutral employees are often waiting for a signal that the organisation is worth committing to. A development conversation, a new responsibility, or direct and specific recognition can shift the balance. The data tells you which category is the lever for each team.</p>
 
-<p><strong>On communication:</strong> Whatever you find, close the loop. Tell employees what the data showed, what you are doing about it, and when they will hear back. Gallup's 2024 research found that <strong>61%</strong> of employees who receive both feedback and recognition from their manager at least once a week are engaged — nearly three times the global average.</p>
+<p><strong>When sentiment is negative:</strong> Do not rush to reassure. Understand the root cause first. Is it a specific manager? Workload? A decision that was communicated poorly? Address the cause, not the symptom, and use follow-up pulse surveys to measure whether the change had any effect.</p>
+
+<p><strong>On communication:</strong> Whatever you find, close the loop. Tell employees what the data showed, what you are doing about it, and when they will hear back. Survey fatigue is driven almost entirely by the perception that nothing changes. Gallup's 2024 research found that <strong>61%</strong> of employees who receive both feedback and recognition from their manager at least once a week are engaged. That is nearly three times the global average. The frequency of the response matters as much as the response itself.</p>
 
 <h2>FAQs</h2>
 
 <h3>1. What is a good employee sentiment score?</h3>
-<p>There is no universal benchmark. What matters more than the absolute score is the trend over time and the variance between departments. A company average of 72 with one department at 14 is a more urgent situation than a company average of 60 where all departments sit between 55 and 68.</p>
+<p>There is no universal benchmark. Context varies by industry, company size, and what has happened in the organisation recently. What matters more than the absolute score is the trend over time and the variance between departments. A company average of 72 with one department at 14 is a more urgent situation than a company average of 60 where all departments sit between 55 and 68.</p>
 
 <h3>2. How does employee sentiment differ from employee engagement?</h3>
-<p>Engagement measures how invested an employee is in their work and the organisation. Sentiment measures how they feel. An employee can be highly engaged while holding negative sentiment. Tracking both gives a fuller picture than either metric alone.</p>
+<p>Engagement measures how invested an employee is in their work and the organisation. Sentiment measures how they feel. The two are related but not the same. An employee can be highly engaged while holding negative sentiment. They may be working hard while feeling undervalued, overlooked, or worried about where the company is going. Tracking both gives a fuller picture than either metric alone.</p>
 
-<h3>3. How often should you measure employee sentiment?</h3>
-<p>Quarterly is the minimum for meaningful trend data. Monthly pulse surveys give you faster signal. Gallup research found that <strong>51%</strong> of exiting employees report that no leader spoke with them about their job satisfaction in the three months before they resigned.</p>
+<h3>3. How does employee sentiment differ from employee morale?</h3>
+<p>Morale is typically situational and group-level, capturing the collective mood of a team following a win, a setback, or an organisational change. Sentiment is broader and more persistent. It captures the underlying emotional state of the workforce across time, not just the reaction to a specific event.</p>
 
-<h3>4. How do you improve negative employee sentiment?</h3>
-<p>Start with the data. Identify which departments, categories, or demographics are most affected, then read the open-ended responses to understand why. Prioritise root-cause interventions over broad-brush programmes. Then close the loop: tell employees what you found and what you are doing about it.</p>
+<h3>4. How often should you measure employee sentiment?</h3>
+<p>Quarterly is the minimum for meaningful trend data. Monthly pulse surveys give you faster signal. For teams going through significant change, monthly or fortnightly check-ins are appropriate. Annual surveys alone leave too wide a gap. Gallup research found that <strong>51%</strong> of exiting employees report that no leader spoke with them about their job satisfaction in the three months before they resigned.</p>
 
-<h3>5. Is employee sentiment analysis anonymous?</h3>
-<p>It should be. Anonymity is what makes the data honest. Employees who believe their responses can be traced to them self-censor, which corrupts the signal. Effective sentiment platforms anonymise responses at collection and make the anonymity guarantee visible to employees at the point of survey completion.</p>
+<h3>5. How do you improve negative employee sentiment?</h3>
+<p>Start with the data. Identify which departments, categories, or demographics are most affected, then read the open-ended responses to understand why. Prioritise root-cause interventions over broad-brush programmes. Then close the loop: tell employees what you found and what you are doing about it. Follow-up pulse surveys measure whether the changes worked.</p>
+
+<h3>6. Is employee sentiment analysis anonymous?</h3>
+<p>It should be. Anonymity is what makes the data honest. Employees who believe their responses can be traced to them self-censor, which corrupts the signal. Effective sentiment platforms anonymise responses at collection, prevent re-identification from partial data, and make the anonymity guarantee visible to employees at the point of survey completion. That anonymity guarantee is what makes the data trustworthy.</p>
 `
   },
 
