@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil Khan — Content Marketing</title>
-    <meta name="description" content="Content Marketing Associate with 2+ years in B2B SaaS. Content strategy, SEO, and AI-powered marketing systems.">
+    <title>Sahil Khan — B2B SaaS Marketing & GTM</title>
+    <meta name="description" content="I build a product's go-to-market foundation from zero: positioning, brand voice, content engine, sales collateral, and AI-powered marketing systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         img { -webkit-user-drag: none; user-drag: none; user-select: none; -webkit-user-select: none; pointer-events: none; }
@@ -270,7 +270,7 @@
 
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem 2rem;
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.08);
@@ -498,15 +498,20 @@
         }
 
         .project-placeholder {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-            font-size: 0.75rem;
-            color: var(--text-4);
+            gap: 0.45rem;
+            margin-top: 1.125rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            transition: background 0.12s;
         }
+
+        .project-card:hover .project-placeholder { background: #e0e7ff; }
 
         .project-outcome {
             font-size: 0.75rem;
@@ -1400,6 +1405,57 @@
             color: var(--text-4);
         }
 
+        /* ─── DISPLAY TYPE ────────────────────────── */
+        .hero h1, .section-h2 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+        }
+
+        /* ─── WHAT I DO ───────────────────────────── */
+        .whatido-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .whatido-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .whatido-num {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--accent);
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        .whatido-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin-bottom: 0.375rem;
+        }
+
+        .whatido-item p {
+            font-size: 0.875rem;
+            color: var(--text-3);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 720px) {
+            .whatido-grid { grid-template-columns: 1fr; }
+        }
+
         /* ─── RESPONSIVE ──────────────────────────── */
         @media (max-width: 900px) {
             .projects-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1413,9 +1469,6 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.25rem 1rem;
             }
-            .hero-stats > div:last-child {
-                grid-column: 1 / -1;
-            }
             .reader-panel { width: 100%; }
         }
     </style>
@@ -1426,8 +1479,8 @@
 <nav>
     <a href="#" class="nav-name">Sahil <span>Khan</span></a>
     <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
         <li><a href="#writing">Writing</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -1446,24 +1499,23 @@
 <!-- ── HERO ─────────────────────────────────────── -->
 <section class="hero">
     <div class="hero-inner">
-<h1>Hey, I'm Sahil Khan 👋</h1>
-        <div class="hero-underline"></div>
-        <p class="hero-role">B2B SaaS Content &amp; GTM Foundations.</p>
-        <p class="hero-sub">I build marketing from scratch: brand voice, SEO content, GTM strategy, and AI-powered workflows. Currently building the marketing foundation for Vantage Pulse at Vantage Circle.</p>
+<div class="hero-badge"><span class="badge-dot"></span>Sahil Khan · B2B SaaS Marketing</div>
+        <h1>I build a product's go-to-market foundation from zero.</h1>
+        <p class="hero-sub">Positioning, competitive intelligence, sales enablement, and the content engine that distributes it all. Built for Vantage Pulse at Vantage Circle.</p>
         <div class="hero-actions">
-            <a href="#writing" class="btn-primary">
-                View Writing
+            <a href="#work" class="btn-primary">
+                See the Work
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="mailto:sahilkhan93781@gmail.com" class="btn-ghost">Get in Touch</a>
         </div>
         <div class="hero-stats">
             <div>
-                <span class="hero-stat-value"><em>4</em> formats</span>
-                <span class="hero-stat-label">Blogs · Docs · UX · Collaterals</span>
+                <span class="hero-stat-value"><em>Every</em> format</span>
+                <span class="hero-stat-label">Blogs · UX · Docs · Decks · Social</span>
             </div>
             <div>
-                <span class="hero-stat-value"><em>30+</em></span>
+                <span class="hero-stat-value"><em>50+</em></span>
                 <span class="hero-stat-label">Organic leads driven</span>
             </div>
             <div>
@@ -1474,10 +1526,133 @@
                 <span class="hero-stat-value"><em>2</em> live</span>
                 <span class="hero-stat-label">AI systems deployed</span>
             </div>
-            <div>
-                <span class="hero-stat-value"><em>0 → 500+</em></span>
-                <span class="hero-stat-label">Built &amp; grew Vantage Pulse's LinkedIn</span>
+        </div>
+    </div>
+</section>
+
+<!-- ── WHAT I DO ─────────────────────────────────── -->
+<section class="section" id="whatido">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">What I Do</p>
+            <h2 class="section-h2">Four things, done end to end</h2>
+            <p class="section-desc">Not a generalist who touches everything lightly. These are the four jobs I've owned from a blank page to shipped and running.</p>
+        </div>
+        <div class="whatido-grid">
+            <div class="whatido-item">
+                <span class="whatido-num">01</span>
+                <div>
+                    <h3>Positioning &amp; Messaging</h3>
+                    <p>Category research first, copy second. I find the angle a product can actually defend, then write the voice guidelines, messaging framework, and proof points that follow from it.</p>
+                </div>
             </div>
+            <div class="whatido-item">
+                <span class="whatido-num">02</span>
+                <div>
+                    <h3>Competitive Intelligence</h3>
+                    <p>I built an automated system that monitors 11 competitors every week. When their positioning, pricing, or features move, I turn it into messaging responses and GTM recommendations.</p>
+                </div>
+            </div>
+            <div class="whatido-item">
+                <span class="whatido-num">03</span>
+                <div>
+                    <h3>Sales Enablement</h3>
+                    <p>Decks, brochures, one-pagers, and product docs that give Sales something sharper than a feature list to walk into a call with.</p>
+                </div>
+            </div>
+            <div class="whatido-item">
+                <span class="whatido-num">04</span>
+                <div>
+                    <h3>Content as Distribution</h3>
+                    <p>A 60+ article SEO engine that carries the positioning into every search result, kept healthy by AI systems I built myself, including a CMS that audits its own SEO.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── SELECTED WORK ─────────────────────────────── -->
+<section class="section section-alt" id="work">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">Selected Work</p>
+            <h2 class="section-h2">The work, with receipts</h2>
+            <p class="section-desc">Every piece below is real and inspectable: click into the galleries, read the report, check the numbers.</p>
+        </div>
+        <div class="projects-grid">
+
+            <a href="sea-of-sameness.html" target="_blank" rel="noopener" class="project-card" aria-label="Read The Sea of Sameness positioning teardown" style="text-decoration:none; color:inherit; display:block;">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </div>
+                <span class="project-tag">Positioning Research</span>
+                <h3>The Sea of Sameness</h3>
+                <p>I analyzed how eleven employee engagement platforms describe themselves and found they had converged on the same sentence. Then I mined hundreds of G2 and Capterra reviews and wrote an evidence-backed teardown of the category's positioning.</p>
+                <p class="project-outcome">Original research across 11 vendors, with a defensible point of view on where the category's white space is.</p>
+                <div class="project-placeholder">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Read the Report
+                </div>
+            </a>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <span class="project-tag">Competitive Intel · AI System</span>
+                <h3>Competitive Intelligence System</h3>
+                <p>Nobody was watching the competition systematically. I built an automated monitor that checks 11 competitors' sites every week and flags what changed, feeding a response workflow that turns their moves into messaging updates and GTM drafts.</p>
+                <p class="project-outcome">Competitor moves now surface every Monday morning instead of whenever someone happens to notice.</p>
+            </div>
+
+<div class="project-card" onclick="openCmsOverlay()" role="button" tabindex="0" aria-label="View SEO Content CMS project" style="cursor:pointer;">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <span class="project-tag">AI System</span>
+                <h3>SEO Content CMS</h3>
+                <p>Keeping 44 live articles SEO-healthy meant juggling four tools for every audit. I built a Next.js + Decap CMS that pulls SEO scores, link health, metadata gaps, and priority fixes into one dashboard.</p>
+                <p class="project-outcome">Audit time went from hours of cross-referencing to minutes, across the full 44-article library.</p>
+                <div class="project-placeholder">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    View Project
+                </div>
+            </div>
+
+<div class="project-card" onclick="openCollateralOverlay()" role="button" tabindex="0" aria-label="View Sales Collateral Suite" style="cursor:pointer;">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <span class="project-tag">Sales Enablement</span>
+                <h3>Sales Collateral Suite</h3>
+                <p>Vantage Pulse had no sales collateral. I built the full library from scratch: sales deck, product brochures, and one-pagers covering the buyer journey from awareness to close.</p>
+                <p class="project-outcome">Used across the full sales cycle by Sales and CX teams; supported 50+ organic leads in the pipeline.</p>
+                <div class="project-placeholder">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    View Samples
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 0v6l3 3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span class="project-tag">Positioning &amp; Messaging</span>
+                <h3>Brand Voice &amp; GTM Foundation</h3>
+                <p>Before the content could exist, the product needed a voice. I wrote the brand voice guidelines, messaging framework, and content strategy that Vantage Pulse went to market with.</p>
+                <p class="project-outcome">Now the single reference for all Vantage Pulse messaging, applied across 60+ articles and every collateral format.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+                </div>
+                <span class="project-tag">Organic Growth</span>
+                <h3>LinkedIn From Zero</h3>
+                <p>Vantage Pulse had no LinkedIn presence. I set up the page, defined its voice, and ran everything from content ideation to publishing single-handedly.</p>
+                <p class="project-outcome">0 to 500+ followers with zero paid promotion.</p>
+            </div>
+
         </div>
     </div>
 </section>
@@ -1489,62 +1664,10 @@
             <div>
                 <p class="eyebrow">Writing</p>
                 <h2 class="section-h2">Published Articles</h2>
-                <p class="section-desc">I manage a library of <strong>40+ published articles</strong> on employee engagement, HR strategy, and the future of work. Four samples below. Click any card to read it here.</p>
+                <p class="section-desc">I manage a library of <strong>60+ published articles</strong> on employee engagement, HR strategy, and the future of work. Four samples below. Click any card to read it here.</p>
             </div>
         </div>
         <div class="blog-grid" id="blog-grid"></div>
-    </div>
-</section>
-
-<!-- ── PROJECTS ───────────────────────────────────── -->
-<section class="section section-alt" id="projects">
-    <div class="container">
-        <div class="section-head">
-            <p class="eyebrow">Projects</p>
-            <h2 class="section-h2">What I've Built</h2>
-            <p class="section-desc">Beyond writing: marketing systems, tools, and growth projects.</p>
-        </div>
-        <div class="projects-grid">
-
-<div class="project-card" onclick="openCmsOverlay()" role="button" tabindex="0" aria-label="View SEO Content CMS project" style="cursor:pointer;">
-                <div class="project-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                </div>
-                <span class="project-tag">Tools · AI</span>
-                <h3>SEO Content CMS</h3>
-                <p>Built a Next.js + Decap CMS to manage 43 blogs — with automated SEO metadata, schema markup, link health tracking, and a real-time analytics dashboard.</p>
-                <p class="project-outcome">Replaced a manual audit process across 44 live articles; reduced SEO review time from hours to minutes.</p>
-                <div class="project-placeholder">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                    View Project
-                </div>
-            </div>
-
-<div class="project-card" onclick="openCollateralOverlay()" role="button" tabindex="0" aria-label="View Sales Collateral Suite" style="cursor:pointer;">
-                <div class="project-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                </div>
-                <span class="project-tag">Collateral</span>
-                <h3>Sales Collateral Suite</h3>
-                <p>Built the full collateral library for Vantage Pulse from scratch — sales deck, product brochures, and one-pagers covering the complete buyer journey from awareness to close.</p>
-                <p class="project-outcome">Used across the full sales cycle by Sales and CX teams; contributed to 30+ organic leads in the pipeline.</p>
-                <div class="project-placeholder">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                    View Samples
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">
-                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 0v6l3 3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <span class="project-tag">Content Strategy</span>
-                <h3>Brand Voice & GTM Content Foundation</h3>
-                <p>Developed brand voice guidelines, messaging framework, and the full content strategy for Vantage Pulse's go-to-market motion, from scratch to launch.</p>
-                <p class="project-outcome">Adopted across 40+ articles and 3 collateral formats; now the single reference for all Vantage Pulse messaging.</p>
-            </div>
-
-        </div>
     </div>
 </section>
 
@@ -1564,8 +1687,8 @@
                 <p class="tl-company">Vantage Circle · Guwahati, India</p>
                 <ul class="tl-list">
                     <li>Built the end-to-end marketing foundation for Vantage Pulse: brand voice, content strategy, and GTM collaterals.</li>
-                    <li>Managed a 40+ blog content library from research and writing to SEO updates, driving consistent search ranking growth.</li>
-<li>Built a CMS in Claude Code to automate SEO metadata, schema markup, and link health tracking across 40+ blogs.</li>
+                    <li>Managed a 60+ blog content library from research and writing to SEO updates, driving consistent search ranking growth.</li>
+<li>Built a CMS in Claude Code to automate SEO metadata, schema markup, and link health tracking across the blog library.</li>
                     <li>Wrote UX copy and product documentation for Vantage Pulse, covering onboarding flows, in-app tooltips, and feature guides for end users and HR admins.</li>
                     <li>Built a centralized collateral repository for Sales and CX teams, consolidating pitch decks, one-pagers, and product docs into a single reference hub.</li>
                     <li>Built Vantage Pulse's LinkedIn presence from scratch, handling everything from page setup and brand voice to content ideation and publishing, growing it to 500+ followers with no paid promotion.</li>
@@ -1605,7 +1728,7 @@
         <div class="contact-wrap">
             <p class="eyebrow">Contact</p>
             <h2 class="section-h2">Let's Talk</h2>
-            <p class="section-desc">Open to full-time roles in content marketing, SEO, and B2B SaaS marketing. Based in India, open to remote.</p>
+            <p class="section-desc">Open to full-time roles in product marketing, content, and GTM for B2B SaaS. Based in India, open to remote.</p>
             <div class="contact-list">
                 <a href="mailto:sahilkhan93781@gmail.com" class="contact-item">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.25"/><path d="M2 5l6 5 6-5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg>
@@ -1628,7 +1751,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Sahil Khan · Content Marketing Associate</p>
+    <p>© 2026 Sahil Khan · Built by hand, hosted on my own stack</p>
 </footer>
 
 <!-- ── READER MODAL ────────────────────────────────── -->
